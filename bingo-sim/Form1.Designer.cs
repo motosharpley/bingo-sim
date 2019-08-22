@@ -30,14 +30,6 @@
         {
             this.BingoCard = new System.Windows.Forms.TableLayoutPanel();
             this.b1 = new System.Windows.Forms.Label();
-            this.connect_btn = new System.Windows.Forms.Button();
-            this.spin_btn = new System.Windows.Forms.Button();
-            this.preview_btn = new System.Windows.Forms.Button();
-            this.play_preview_btn = new System.Windows.Forms.Button();
-            this.Messages_in = new System.Windows.Forms.ListBox();
-            this.Messages_out = new System.Windows.Forms.ListBox();
-            this.Interim_Daub_btn = new System.Windows.Forms.RadioButton();
-            this.Coverall_Daub_btn = new System.Windows.Forms.RadioButton();
             this.b2 = new System.Windows.Forms.Label();
             this.b3 = new System.Windows.Forms.Label();
             this.b4 = new System.Windows.Forms.Label();
@@ -62,6 +54,14 @@
             this.o3 = new System.Windows.Forms.Label();
             this.o4 = new System.Windows.Forms.Label();
             this.o5 = new System.Windows.Forms.Label();
+            this.Connect_btn = new System.Windows.Forms.Button();
+            this.Spin_btn = new System.Windows.Forms.Button();
+            this.Preview_btn = new System.Windows.Forms.Button();
+            this.Play_preview_btn = new System.Windows.Forms.Button();
+            this.Messages_in = new System.Windows.Forms.ListBox();
+            this.Messages_out = new System.Windows.Forms.ListBox();
+            this.Interim_Daub_btn = new System.Windows.Forms.RadioButton();
+            this.Coverall_Daub_btn = new System.Windows.Forms.RadioButton();
             this.BingoCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,82 +123,6 @@
             this.b1.TabIndex = 24;
             this.b1.Text = "b1";
             this.b1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // connect_btn
-            // 
-            this.connect_btn.Location = new System.Drawing.Point(24, 449);
-            this.connect_btn.Name = "connect_btn";
-            this.connect_btn.Size = new System.Drawing.Size(75, 23);
-            this.connect_btn.TabIndex = 1;
-            this.connect_btn.Text = "Connect";
-            this.connect_btn.UseVisualStyleBackColor = true;
-            this.connect_btn.Click += new System.EventHandler(this.connect_btn_Click);
-            // 
-            // spin_btn
-            // 
-            this.spin_btn.Location = new System.Drawing.Point(105, 449);
-            this.spin_btn.Name = "spin_btn";
-            this.spin_btn.Size = new System.Drawing.Size(75, 23);
-            this.spin_btn.TabIndex = 2;
-            this.spin_btn.Text = "Spin";
-            this.spin_btn.UseVisualStyleBackColor = true;
-            // 
-            // preview_btn
-            // 
-            this.preview_btn.Location = new System.Drawing.Point(186, 449);
-            this.preview_btn.Name = "preview_btn";
-            this.preview_btn.Size = new System.Drawing.Size(90, 23);
-            this.preview_btn.TabIndex = 3;
-            this.preview_btn.Text = "Preview Card";
-            this.preview_btn.UseVisualStyleBackColor = true;
-            // 
-            // play_preview_btn
-            // 
-            this.play_preview_btn.Location = new System.Drawing.Point(282, 449);
-            this.play_preview_btn.Name = "play_preview_btn";
-            this.play_preview_btn.Size = new System.Drawing.Size(84, 23);
-            this.play_preview_btn.TabIndex = 4;
-            this.play_preview_btn.Text = "Play Preview";
-            this.play_preview_btn.UseVisualStyleBackColor = true;
-            // 
-            // Messages_in
-            // 
-            this.Messages_in.FormattingEnabled = true;
-            this.Messages_in.Location = new System.Drawing.Point(651, 18);
-            this.Messages_in.Name = "Messages_in";
-            this.Messages_in.Size = new System.Drawing.Size(179, 433);
-            this.Messages_in.TabIndex = 5;
-            this.Messages_in.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // Messages_out
-            // 
-            this.Messages_out.FormattingEnabled = true;
-            this.Messages_out.Location = new System.Drawing.Point(423, 18);
-            this.Messages_out.Name = "Messages_out";
-            this.Messages_out.Size = new System.Drawing.Size(179, 433);
-            this.Messages_out.TabIndex = 6;
-            // 
-            // Interim_Daub_btn
-            // 
-            this.Interim_Daub_btn.AutoSize = true;
-            this.Interim_Daub_btn.Location = new System.Drawing.Point(24, 409);
-            this.Interim_Daub_btn.Name = "Interim_Daub_btn";
-            this.Interim_Daub_btn.Size = new System.Drawing.Size(115, 17);
-            this.Interim_Daub_btn.TabIndex = 7;
-            this.Interim_Daub_btn.TabStop = true;
-            this.Interim_Daub_btn.Text = "Show Interim Daub";
-            this.Interim_Daub_btn.UseVisualStyleBackColor = true;
-            // 
-            // Coverall_Daub_btn
-            // 
-            this.Coverall_Daub_btn.AutoSize = true;
-            this.Coverall_Daub_btn.Location = new System.Drawing.Point(145, 409);
-            this.Coverall_Daub_btn.Name = "Coverall_Daub_btn";
-            this.Coverall_Daub_btn.Size = new System.Drawing.Size(122, 17);
-            this.Coverall_Daub_btn.TabIndex = 8;
-            this.Coverall_Daub_btn.TabStop = true;
-            this.Coverall_Daub_btn.Text = "Show Coverall Daub";
-            this.Coverall_Daub_btn.UseVisualStyleBackColor = true;
             // 
             // b2
             // 
@@ -287,7 +211,6 @@
             this.i4.TabIndex = 32;
             this.i4.Text = "i4";
             this.i4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.i4.Click += new System.EventHandler(this.label9_Click_1);
             // 
             // i5
             // 
@@ -465,6 +388,87 @@
             this.o5.Text = "o5";
             this.o5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Connect_btn
+            // 
+            this.Connect_btn.Location = new System.Drawing.Point(24, 449);
+            this.Connect_btn.Name = "Connect_btn";
+            this.Connect_btn.Size = new System.Drawing.Size(75, 23);
+            this.Connect_btn.TabIndex = 1;
+            this.Connect_btn.Text = "Connect";
+            this.Connect_btn.UseVisualStyleBackColor = true;
+            this.Connect_btn.Click += new System.EventHandler(this.Connect_btn_Click);
+            // 
+            // Spin_btn
+            // 
+            this.Spin_btn.Location = new System.Drawing.Point(105, 449);
+            this.Spin_btn.Name = "Spin_btn";
+            this.Spin_btn.Size = new System.Drawing.Size(75, 23);
+            this.Spin_btn.TabIndex = 2;
+            this.Spin_btn.Text = "Spin";
+            this.Spin_btn.UseVisualStyleBackColor = true;
+            this.Spin_btn.Click += new System.EventHandler(this.Spin_btn_Click);
+            // 
+            // Preview_btn
+            // 
+            this.Preview_btn.Location = new System.Drawing.Point(186, 449);
+            this.Preview_btn.Name = "Preview_btn";
+            this.Preview_btn.Size = new System.Drawing.Size(90, 23);
+            this.Preview_btn.TabIndex = 3;
+            this.Preview_btn.Text = "Preview Card";
+            this.Preview_btn.UseVisualStyleBackColor = true;
+            this.Preview_btn.Click += new System.EventHandler(this.Preview_btn_Click);
+            // 
+            // Play_preview_btn
+            // 
+            this.Play_preview_btn.Location = new System.Drawing.Point(282, 449);
+            this.Play_preview_btn.Name = "Play_preview_btn";
+            this.Play_preview_btn.Size = new System.Drawing.Size(84, 23);
+            this.Play_preview_btn.TabIndex = 4;
+            this.Play_preview_btn.Text = "Play Preview";
+            this.Play_preview_btn.UseVisualStyleBackColor = true;
+            this.Play_preview_btn.Click += new System.EventHandler(this.Play_preview_btn_Click);
+            // 
+            // Messages_in
+            // 
+            this.Messages_in.FormattingEnabled = true;
+            this.Messages_in.Location = new System.Drawing.Point(651, 18);
+            this.Messages_in.Name = "Messages_in";
+            this.Messages_in.Size = new System.Drawing.Size(179, 433);
+            this.Messages_in.TabIndex = 5;
+            // 
+            // Messages_out
+            // 
+            this.Messages_out.FormattingEnabled = true;
+            this.Messages_out.Location = new System.Drawing.Point(423, 18);
+            this.Messages_out.Name = "Messages_out";
+            this.Messages_out.Size = new System.Drawing.Size(179, 433);
+            this.Messages_out.TabIndex = 6;
+            this.Messages_out.SelectedIndexChanged += new System.EventHandler(this.Messages_out_SelectedIndexChanged);
+            // 
+            // Interim_Daub_btn
+            // 
+            this.Interim_Daub_btn.AutoSize = true;
+            this.Interim_Daub_btn.Location = new System.Drawing.Point(24, 409);
+            this.Interim_Daub_btn.Name = "Interim_Daub_btn";
+            this.Interim_Daub_btn.Size = new System.Drawing.Size(115, 17);
+            this.Interim_Daub_btn.TabIndex = 7;
+            this.Interim_Daub_btn.TabStop = true;
+            this.Interim_Daub_btn.Text = "Show Interim Daub";
+            this.Interim_Daub_btn.UseVisualStyleBackColor = true;
+            this.Interim_Daub_btn.CheckedChanged += new System.EventHandler(this.Interim_Daub_btn_CheckedChanged);
+            // 
+            // Coverall_Daub_btn
+            // 
+            this.Coverall_Daub_btn.AutoSize = true;
+            this.Coverall_Daub_btn.Location = new System.Drawing.Point(145, 409);
+            this.Coverall_Daub_btn.Name = "Coverall_Daub_btn";
+            this.Coverall_Daub_btn.Size = new System.Drawing.Size(122, 17);
+            this.Coverall_Daub_btn.TabIndex = 8;
+            this.Coverall_Daub_btn.TabStop = true;
+            this.Coverall_Daub_btn.Text = "Show Coverall Daub";
+            this.Coverall_Daub_btn.UseVisualStyleBackColor = true;
+            this.Coverall_Daub_btn.CheckedChanged += new System.EventHandler(this.Coverall_Daub_btn_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,10 +479,10 @@
             this.Controls.Add(this.Interim_Daub_btn);
             this.Controls.Add(this.Messages_out);
             this.Controls.Add(this.Messages_in);
-            this.Controls.Add(this.play_preview_btn);
-            this.Controls.Add(this.preview_btn);
-            this.Controls.Add(this.spin_btn);
-            this.Controls.Add(this.connect_btn);
+            this.Controls.Add(this.Play_preview_btn);
+            this.Controls.Add(this.Preview_btn);
+            this.Controls.Add(this.Spin_btn);
+            this.Controls.Add(this.Connect_btn);
             this.Controls.Add(this.BingoCard);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -493,10 +497,10 @@
 
         private System.Windows.Forms.TableLayoutPanel BingoCard;
         private System.Windows.Forms.Label b1;
-        private System.Windows.Forms.Button connect_btn;
-        private System.Windows.Forms.Button spin_btn;
-        private System.Windows.Forms.Button preview_btn;
-        private System.Windows.Forms.Button play_preview_btn;
+        private System.Windows.Forms.Button Connect_btn;
+        private System.Windows.Forms.Button Spin_btn;
+        private System.Windows.Forms.Button Preview_btn;
+        private System.Windows.Forms.Button Play_preview_btn;
         private System.Windows.Forms.ListBox Messages_in;
         private System.Windows.Forms.ListBox Messages_out;
         private System.Windows.Forms.RadioButton Interim_Daub_btn;

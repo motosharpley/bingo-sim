@@ -36,27 +36,38 @@ namespace bingo_sim
             }
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void connect_btn_Click(object sender, EventArgs e)
+        private void Connect_btn_Click(object sender, EventArgs e)
         {
             //Connect to bing server
         }
 
-        private void label9_Click_1(object sender, EventArgs e)
+        private void Spin_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Preview_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Play_preview_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Interim_Daub_btn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Coverall_Daub_btn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Messages_out_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
