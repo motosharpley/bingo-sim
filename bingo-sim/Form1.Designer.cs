@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.BingoCard = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.b1 = new System.Windows.Forms.Label();
             this.connect_btn = new System.Windows.Forms.Button();
             this.spin_btn = new System.Windows.Forms.Button();
             this.preview_btn = new System.Windows.Forms.Button();
@@ -38,30 +38,30 @@
             this.Messages_out = new System.Windows.Forms.ListBox();
             this.Interim_Daub_btn = new System.Windows.Forms.RadioButton();
             this.Coverall_Daub_btn = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.b2 = new System.Windows.Forms.Label();
+            this.b3 = new System.Windows.Forms.Label();
+            this.b4 = new System.Windows.Forms.Label();
+            this.b5 = new System.Windows.Forms.Label();
+            this.i1 = new System.Windows.Forms.Label();
+            this.i2 = new System.Windows.Forms.Label();
+            this.i3 = new System.Windows.Forms.Label();
+            this.i4 = new System.Windows.Forms.Label();
+            this.i5 = new System.Windows.Forms.Label();
+            this.n1 = new System.Windows.Forms.Label();
+            this.n2 = new System.Windows.Forms.Label();
+            this.n3 = new System.Windows.Forms.Label();
+            this.n4 = new System.Windows.Forms.Label();
+            this.n5 = new System.Windows.Forms.Label();
+            this.g1 = new System.Windows.Forms.Label();
+            this.g2 = new System.Windows.Forms.Label();
+            this.g3 = new System.Windows.Forms.Label();
+            this.g4 = new System.Windows.Forms.Label();
+            this.g5 = new System.Windows.Forms.Label();
+            this.o1 = new System.Windows.Forms.Label();
+            this.o2 = new System.Windows.Forms.Label();
+            this.o3 = new System.Windows.Forms.Label();
+            this.o4 = new System.Windows.Forms.Label();
+            this.o5 = new System.Windows.Forms.Label();
             this.BingoCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,31 +75,31 @@
             this.BingoCard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.BingoCard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.BingoCard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.BingoCard.Controls.Add(this.label1, 0, 0);
-            this.BingoCard.Controls.Add(this.label2, 0, 1);
-            this.BingoCard.Controls.Add(this.label3, 0, 2);
-            this.BingoCard.Controls.Add(this.label4, 0, 3);
-            this.BingoCard.Controls.Add(this.label5, 0, 4);
-            this.BingoCard.Controls.Add(this.label6, 1, 0);
-            this.BingoCard.Controls.Add(this.label7, 1, 1);
-            this.BingoCard.Controls.Add(this.label8, 1, 2);
-            this.BingoCard.Controls.Add(this.label9, 1, 3);
-            this.BingoCard.Controls.Add(this.label10, 1, 4);
-            this.BingoCard.Controls.Add(this.label11, 2, 0);
-            this.BingoCard.Controls.Add(this.label12, 2, 1);
-            this.BingoCard.Controls.Add(this.label13, 2, 2);
-            this.BingoCard.Controls.Add(this.label14, 2, 3);
-            this.BingoCard.Controls.Add(this.label15, 2, 4);
-            this.BingoCard.Controls.Add(this.label16, 3, 0);
-            this.BingoCard.Controls.Add(this.label17, 3, 1);
-            this.BingoCard.Controls.Add(this.label18, 3, 2);
-            this.BingoCard.Controls.Add(this.label19, 3, 3);
-            this.BingoCard.Controls.Add(this.label20, 3, 4);
-            this.BingoCard.Controls.Add(this.label21, 4, 0);
-            this.BingoCard.Controls.Add(this.label22, 4, 1);
-            this.BingoCard.Controls.Add(this.label23, 4, 2);
-            this.BingoCard.Controls.Add(this.label24, 4, 3);
-            this.BingoCard.Controls.Add(this.label25, 4, 4);
+            this.BingoCard.Controls.Add(this.b1, 0, 0);
+            this.BingoCard.Controls.Add(this.b2, 0, 1);
+            this.BingoCard.Controls.Add(this.b3, 0, 2);
+            this.BingoCard.Controls.Add(this.b4, 0, 3);
+            this.BingoCard.Controls.Add(this.b5, 0, 4);
+            this.BingoCard.Controls.Add(this.i1, 1, 0);
+            this.BingoCard.Controls.Add(this.i2, 1, 1);
+            this.BingoCard.Controls.Add(this.i3, 1, 2);
+            this.BingoCard.Controls.Add(this.i4, 1, 3);
+            this.BingoCard.Controls.Add(this.i5, 1, 4);
+            this.BingoCard.Controls.Add(this.n1, 2, 0);
+            this.BingoCard.Controls.Add(this.n2, 2, 1);
+            this.BingoCard.Controls.Add(this.n3, 2, 2);
+            this.BingoCard.Controls.Add(this.n4, 2, 3);
+            this.BingoCard.Controls.Add(this.n5, 2, 4);
+            this.BingoCard.Controls.Add(this.g1, 3, 0);
+            this.BingoCard.Controls.Add(this.g2, 3, 1);
+            this.BingoCard.Controls.Add(this.g3, 3, 2);
+            this.BingoCard.Controls.Add(this.g4, 3, 3);
+            this.BingoCard.Controls.Add(this.g5, 3, 4);
+            this.BingoCard.Controls.Add(this.o1, 4, 0);
+            this.BingoCard.Controls.Add(this.o2, 4, 1);
+            this.BingoCard.Controls.Add(this.o3, 4, 2);
+            this.BingoCard.Controls.Add(this.o4, 4, 3);
+            this.BingoCard.Controls.Add(this.o5, 4, 4);
             this.BingoCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BingoCard.Location = new System.Drawing.Point(12, 18);
             this.BingoCard.Name = "BingoCard";
@@ -113,16 +113,16 @@
             this.BingoCard.Size = new System.Drawing.Size(360, 360);
             this.BingoCard.TabIndex = 0;
             // 
-            // label1
+            // b1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(6, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 68);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.b1.AutoSize = true;
+            this.b1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.b1.Location = new System.Drawing.Point(6, 3);
+            this.b1.Name = "b1";
+            this.b1.Size = new System.Drawing.Size(62, 68);
+            this.b1.TabIndex = 24;
+            this.b1.Text = "b1";
+            this.b1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // connect_btn
             // 
@@ -200,269 +200,270 @@
             this.Coverall_Daub_btn.Text = "Show Coverall Daub";
             this.Coverall_Daub_btn.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // b2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(6, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 68);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "label2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.b2.AutoSize = true;
+            this.b2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.b2.Location = new System.Drawing.Point(6, 74);
+            this.b2.Name = "b2";
+            this.b2.Size = new System.Drawing.Size(62, 68);
+            this.b2.TabIndex = 25;
+            this.b2.Text = "b2";
+            this.b2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // b3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(6, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 68);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "label3";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.b3.AutoSize = true;
+            this.b3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.b3.Location = new System.Drawing.Point(6, 145);
+            this.b3.Name = "b3";
+            this.b3.Size = new System.Drawing.Size(62, 68);
+            this.b3.TabIndex = 26;
+            this.b3.Text = "b3";
+            this.b3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // b4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(6, 216);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 68);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "label4";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.b4.AutoSize = true;
+            this.b4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.b4.Location = new System.Drawing.Point(6, 216);
+            this.b4.Name = "b4";
+            this.b4.Size = new System.Drawing.Size(62, 68);
+            this.b4.TabIndex = 27;
+            this.b4.Text = "b4";
+            this.b4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // b5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(6, 287);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 70);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "label5";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.b5.AutoSize = true;
+            this.b5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.b5.Location = new System.Drawing.Point(6, 287);
+            this.b5.Name = "b5";
+            this.b5.Size = new System.Drawing.Size(62, 70);
+            this.b5.TabIndex = 28;
+            this.b5.Text = "b5";
+            this.b5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // i1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(77, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 68);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "label6";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.i1.AutoSize = true;
+            this.i1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.i1.Location = new System.Drawing.Point(77, 3);
+            this.i1.Name = "i1";
+            this.i1.Size = new System.Drawing.Size(62, 68);
+            this.i1.TabIndex = 29;
+            this.i1.Text = "i1";
+            this.i1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // i2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(77, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 68);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "label7";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.i2.AutoSize = true;
+            this.i2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.i2.Location = new System.Drawing.Point(77, 74);
+            this.i2.Name = "i2";
+            this.i2.Size = new System.Drawing.Size(62, 68);
+            this.i2.TabIndex = 30;
+            this.i2.Text = "i2";
+            this.i2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // i3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(77, 145);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 68);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "label8";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.i3.AutoSize = true;
+            this.i3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.i3.Location = new System.Drawing.Point(77, 145);
+            this.i3.Name = "i3";
+            this.i3.Size = new System.Drawing.Size(62, 68);
+            this.i3.TabIndex = 31;
+            this.i3.Text = "i3";
+            this.i3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // i4
             // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(77, 216);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 68);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "label9";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.i4.AutoSize = true;
+            this.i4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.i4.Location = new System.Drawing.Point(77, 216);
+            this.i4.Name = "i4";
+            this.i4.Size = new System.Drawing.Size(62, 68);
+            this.i4.TabIndex = 32;
+            this.i4.Text = "i4";
+            this.i4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.i4.Click += new System.EventHandler(this.label9_Click_1);
             // 
-            // label10
+            // i5
             // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(77, 287);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 70);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "label10";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.i5.AutoSize = true;
+            this.i5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.i5.Location = new System.Drawing.Point(77, 287);
+            this.i5.Name = "i5";
+            this.i5.Size = new System.Drawing.Size(62, 70);
+            this.i5.TabIndex = 33;
+            this.i5.Text = "i5";
+            this.i5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // n1
             // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(148, 3);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 68);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "label11";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n1.AutoSize = true;
+            this.n1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.n1.Location = new System.Drawing.Point(148, 3);
+            this.n1.Name = "n1";
+            this.n1.Size = new System.Drawing.Size(62, 68);
+            this.n1.TabIndex = 34;
+            this.n1.Text = "n1";
+            this.n1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
+            // n2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(148, 74);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 68);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "label12";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n2.AutoSize = true;
+            this.n2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.n2.Location = new System.Drawing.Point(148, 74);
+            this.n2.Name = "n2";
+            this.n2.Size = new System.Drawing.Size(62, 68);
+            this.n2.TabIndex = 35;
+            this.n2.Text = "n2";
+            this.n2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // n3
             // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(148, 145);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 68);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "label13";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n3.AutoSize = true;
+            this.n3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.n3.Location = new System.Drawing.Point(148, 145);
+            this.n3.Name = "n3";
+            this.n3.Size = new System.Drawing.Size(62, 68);
+            this.n3.TabIndex = 36;
+            this.n3.Text = "n3";
+            this.n3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // n4
             // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(148, 216);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 68);
-            this.label14.TabIndex = 37;
-            this.label14.Text = "label14";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n4.AutoSize = true;
+            this.n4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.n4.Location = new System.Drawing.Point(148, 216);
+            this.n4.Name = "n4";
+            this.n4.Size = new System.Drawing.Size(62, 68);
+            this.n4.TabIndex = 37;
+            this.n4.Text = "n4";
+            this.n4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // n5
             // 
-            this.label15.AutoSize = true;
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(148, 287);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 70);
-            this.label15.TabIndex = 38;
-            this.label15.Text = "label15";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n5.AutoSize = true;
+            this.n5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.n5.Location = new System.Drawing.Point(148, 287);
+            this.n5.Name = "n5";
+            this.n5.Size = new System.Drawing.Size(62, 70);
+            this.n5.TabIndex = 38;
+            this.n5.Text = "n5";
+            this.n5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // g1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(219, 3);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(62, 68);
-            this.label16.TabIndex = 39;
-            this.label16.Text = "label16";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.g1.AutoSize = true;
+            this.g1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.g1.Location = new System.Drawing.Point(219, 3);
+            this.g1.Name = "g1";
+            this.g1.Size = new System.Drawing.Size(62, 68);
+            this.g1.TabIndex = 39;
+            this.g1.Text = "g1";
+            this.g1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // g2
             // 
-            this.label17.AutoSize = true;
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(219, 74);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 68);
-            this.label17.TabIndex = 40;
-            this.label17.Text = "label17";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.g2.AutoSize = true;
+            this.g2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.g2.Location = new System.Drawing.Point(219, 74);
+            this.g2.Name = "g2";
+            this.g2.Size = new System.Drawing.Size(62, 68);
+            this.g2.TabIndex = 40;
+            this.g2.Text = "g2";
+            this.g2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label18
+            // g3
             // 
-            this.label18.AutoSize = true;
-            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(219, 145);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(62, 68);
-            this.label18.TabIndex = 41;
-            this.label18.Text = "label18";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.g3.AutoSize = true;
+            this.g3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.g3.Location = new System.Drawing.Point(219, 145);
+            this.g3.Name = "g3";
+            this.g3.Size = new System.Drawing.Size(62, 68);
+            this.g3.TabIndex = 41;
+            this.g3.Text = "g3";
+            this.g3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label19
+            // g4
             // 
-            this.label19.AutoSize = true;
-            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Location = new System.Drawing.Point(219, 216);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(62, 68);
-            this.label19.TabIndex = 42;
-            this.label19.Text = "label19";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.g4.AutoSize = true;
+            this.g4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.g4.Location = new System.Drawing.Point(219, 216);
+            this.g4.Name = "g4";
+            this.g4.Size = new System.Drawing.Size(62, 68);
+            this.g4.TabIndex = 42;
+            this.g4.Text = "g4";
+            this.g4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label20
+            // g5
             // 
-            this.label20.AutoSize = true;
-            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(219, 287);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(62, 70);
-            this.label20.TabIndex = 43;
-            this.label20.Text = "label20";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.g5.AutoSize = true;
+            this.g5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.g5.Location = new System.Drawing.Point(219, 287);
+            this.g5.Name = "g5";
+            this.g5.Size = new System.Drawing.Size(62, 70);
+            this.g5.TabIndex = 43;
+            this.g5.Text = "g5";
+            this.g5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label21
+            // o1
             // 
-            this.label21.AutoSize = true;
-            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Location = new System.Drawing.Point(290, 3);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(64, 68);
-            this.label21.TabIndex = 44;
-            this.label21.Text = "label21";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.o1.AutoSize = true;
+            this.o1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.o1.Location = new System.Drawing.Point(290, 3);
+            this.o1.Name = "o1";
+            this.o1.Size = new System.Drawing.Size(64, 68);
+            this.o1.TabIndex = 44;
+            this.o1.Text = "o1";
+            this.o1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label22
+            // o2
             // 
-            this.label22.AutoSize = true;
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(290, 74);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(64, 68);
-            this.label22.TabIndex = 45;
-            this.label22.Text = "label22";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.o2.AutoSize = true;
+            this.o2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.o2.Location = new System.Drawing.Point(290, 74);
+            this.o2.Name = "o2";
+            this.o2.Size = new System.Drawing.Size(64, 68);
+            this.o2.TabIndex = 45;
+            this.o2.Text = "o2";
+            this.o2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label23
+            // o3
             // 
-            this.label23.AutoSize = true;
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(290, 145);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(64, 68);
-            this.label23.TabIndex = 46;
-            this.label23.Text = "label23";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.o3.AutoSize = true;
+            this.o3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.o3.Location = new System.Drawing.Point(290, 145);
+            this.o3.Name = "o3";
+            this.o3.Size = new System.Drawing.Size(64, 68);
+            this.o3.TabIndex = 46;
+            this.o3.Text = "o3";
+            this.o3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label24
+            // o4
             // 
-            this.label24.AutoSize = true;
-            this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Location = new System.Drawing.Point(290, 216);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(64, 68);
-            this.label24.TabIndex = 47;
-            this.label24.Text = "label24";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.o4.AutoSize = true;
+            this.o4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.o4.Location = new System.Drawing.Point(290, 216);
+            this.o4.Name = "o4";
+            this.o4.Size = new System.Drawing.Size(64, 68);
+            this.o4.TabIndex = 47;
+            this.o4.Text = "o4";
+            this.o4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label25
+            // o5
             // 
-            this.label25.AutoSize = true;
-            this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Location = new System.Drawing.Point(290, 287);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(64, 70);
-            this.label25.TabIndex = 48;
-            this.label25.Text = "label25";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.o5.AutoSize = true;
+            this.o5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.o5.Location = new System.Drawing.Point(290, 287);
+            this.o5.Name = "o5";
+            this.o5.Size = new System.Drawing.Size(64, 70);
+            this.o5.TabIndex = 48;
+            this.o5.Text = "o5";
+            this.o5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -491,7 +492,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel BingoCard;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label b1;
         private System.Windows.Forms.Button connect_btn;
         private System.Windows.Forms.Button spin_btn;
         private System.Windows.Forms.Button preview_btn;
@@ -500,30 +501,30 @@
         private System.Windows.Forms.ListBox Messages_out;
         private System.Windows.Forms.RadioButton Interim_Daub_btn;
         private System.Windows.Forms.RadioButton Coverall_Daub_btn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label b2;
+        private System.Windows.Forms.Label b3;
+        private System.Windows.Forms.Label b4;
+        private System.Windows.Forms.Label b5;
+        private System.Windows.Forms.Label i1;
+        private System.Windows.Forms.Label i2;
+        private System.Windows.Forms.Label i3;
+        private System.Windows.Forms.Label i4;
+        private System.Windows.Forms.Label i5;
+        private System.Windows.Forms.Label n1;
+        private System.Windows.Forms.Label n2;
+        private System.Windows.Forms.Label n3;
+        private System.Windows.Forms.Label n4;
+        private System.Windows.Forms.Label n5;
+        private System.Windows.Forms.Label g1;
+        private System.Windows.Forms.Label g2;
+        private System.Windows.Forms.Label g3;
+        private System.Windows.Forms.Label g4;
+        private System.Windows.Forms.Label g5;
+        private System.Windows.Forms.Label o1;
+        private System.Windows.Forms.Label o2;
+        private System.Windows.Forms.Label o3;
+        private System.Windows.Forms.Label o4;
+        private System.Windows.Forms.Label o5;
     }
 }
 

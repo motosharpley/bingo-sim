@@ -55,6 +55,11 @@ namespace bingo_sim
         {
             //Connect to bing server
         }
+
+        private void label9_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
