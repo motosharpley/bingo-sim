@@ -132,6 +132,7 @@
             this.connect_btn.TabIndex = 1;
             this.connect_btn.Text = "Connect";
             this.connect_btn.UseVisualStyleBackColor = true;
+            this.connect_btn.Click += new System.EventHandler(this.connect_btn_Click);
             // 
             // spin_btn
             // 

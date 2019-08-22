@@ -50,6 +50,11 @@ namespace bingo_sim
         {
 
         }
+
+        private void connect_btn_Click(object sender, EventArgs e)
+        {
+            //Connect to bing server
+        }
     }
 
 
