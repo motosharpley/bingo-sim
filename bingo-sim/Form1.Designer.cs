@@ -484,7 +484,7 @@
             // IncomingMessagelbl
             // 
             this.IncomingMessagelbl.AutoSize = true;
-            this.IncomingMessagelbl.Location = new System.Drawing.Point(701, 23);
+            this.IncomingMessagelbl.Location = new System.Drawing.Point(694, 23);
             this.IncomingMessagelbl.Name = "IncomingMessagelbl";
             this.IncomingMessagelbl.Size = new System.Drawing.Size(96, 13);
             this.IncomingMessagelbl.TabIndex = 10;
