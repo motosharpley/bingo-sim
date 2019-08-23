@@ -21,6 +21,7 @@ namespace bingo_sim
             AddBingoNumToCard();
         }
 
+        // Dummy Data Bingo Card Numbers
         int[] bingoNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 
         private void AddBingoNumToCard()
@@ -35,7 +36,6 @@ namespace bingo_sim
                     BingoCardLabel.Text = bingonum.ToString();
                     i++;
                 }
-
             }
         }
 
@@ -46,20 +46,15 @@ namespace bingo_sim
                 TcpClient client = new TcpClient("127.0.0.1", port: 3000);
                 StreamReader reader = new StreamReader(client.GetStream());
                 StreamWriter writer = new StreamWriter(client.GetStream());
-                String s = String.Empty;
-                while (!s.Equals("Exit"))
-                {
-                    Console.Write("Enter a string to send to the server: ");
-                    s = Console.ReadLine();
-                    Console.WriteLine();
-                    writer.WriteLine(s);
-                    writer.Flush();
-                    String server_string = reader.ReadLine();
-                    Console.WriteLine(server_string);
-                }
-                reader.Close();
-                writer.Close();
-                client.Close();
+                String s = "Hello Bingo";
+                writer.WriteLine(s);
+                writer.Flush();
+                String server_string = reader.ReadLine();
+                Console.WriteLine(server_string);
+
+                //reader.Close();
+                //writer.Close();
+                //client.Close();
             }
             catch (Exception e)
             {
