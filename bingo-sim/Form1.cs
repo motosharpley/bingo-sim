@@ -44,32 +44,37 @@ namespace bingo_sim
 
         private void Spin_btn_Click(object sender, EventArgs e)
         {
-
+            // Send Play Request
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
         {
-
+            // Send Preview Card Request
         }
 
         private void Play_preview_btn_Click(object sender, EventArgs e)
         {
-
+            // Play Preview Card Request
         }
 
         private void Interim_Daub_btn_CheckedChanged(object sender, EventArgs e)
         {
-
+            // Display Interim Card Daub 
         }
 
         private void Coverall_Daub_btn_CheckedChanged(object sender, EventArgs e)
         {
-
+            // Display Coverall Card Daub
         }
 
         private void Messages_out_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Display outgoing message
+        }
 
+        private void Messages_in_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Display incoming message
         }
     }
 

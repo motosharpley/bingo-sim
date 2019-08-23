@@ -435,6 +435,7 @@
             this.Messages_in.Name = "Messages_in";
             this.Messages_in.Size = new System.Drawing.Size(179, 433);
             this.Messages_in.TabIndex = 5;
+            this.Messages_in.SelectedIndexChanged += new System.EventHandler(this.Messages_in_SelectedIndexChanged);
             // 
             // Messages_out
             // 
