@@ -1,6 +1,6 @@
 ﻿namespace bingo_sim
 {
-    partial class Form1
+    partial class BingoViewer
     {
         /// <summary>
         /// Required designer variable.
