@@ -62,6 +62,8 @@
             this.Messages_out = new System.Windows.Forms.ListBox();
             this.Interim_Daub_btn = new System.Windows.Forms.RadioButton();
             this.Coverall_Daub_btn = new System.Windows.Forms.RadioButton();
+            this.MessageOutlbl = new System.Windows.Forms.Label();
+            this.IncomingMessagelbl = new System.Windows.Forms.Label();
             this.BingoCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -431,7 +433,7 @@
             // Messages_in
             // 
             this.Messages_in.FormattingEnabled = true;
-            this.Messages_in.Location = new System.Drawing.Point(651, 18);
+            this.Messages_in.Location = new System.Drawing.Point(651, 39);
             this.Messages_in.Name = "Messages_in";
             this.Messages_in.Size = new System.Drawing.Size(179, 433);
             this.Messages_in.TabIndex = 5;
@@ -440,7 +442,7 @@
             // Messages_out
             // 
             this.Messages_out.FormattingEnabled = true;
-            this.Messages_out.Location = new System.Drawing.Point(423, 18);
+            this.Messages_out.Location = new System.Drawing.Point(423, 39);
             this.Messages_out.Name = "Messages_out";
             this.Messages_out.Size = new System.Drawing.Size(179, 433);
             this.Messages_out.TabIndex = 6;
@@ -470,12 +472,32 @@
             this.Coverall_Daub_btn.UseVisualStyleBackColor = true;
             this.Coverall_Daub_btn.CheckedChanged += new System.EventHandler(this.Coverall_Daub_btn_CheckedChanged);
             // 
+            // MessageOutlbl
+            // 
+            this.MessageOutlbl.AutoSize = true;
+            this.MessageOutlbl.Location = new System.Drawing.Point(461, 23);
+            this.MessageOutlbl.Name = "MessageOutlbl";
+            this.MessageOutlbl.Size = new System.Drawing.Size(101, 13);
+            this.MessageOutlbl.TabIndex = 9;
+            this.MessageOutlbl.Text = "Out Going Message";
+            // 
+            // IncomingMessagelbl
+            // 
+            this.IncomingMessagelbl.AutoSize = true;
+            this.IncomingMessagelbl.Location = new System.Drawing.Point(701, 23);
+            this.IncomingMessagelbl.Name = "IncomingMessagelbl";
+            this.IncomingMessagelbl.Size = new System.Drawing.Size(96, 13);
+            this.IncomingMessagelbl.TabIndex = 10;
+            this.IncomingMessagelbl.Text = "Incoming Message";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(862, 484);
+            this.Controls.Add(this.IncomingMessagelbl);
+            this.Controls.Add(this.MessageOutlbl);
             this.Controls.Add(this.Coverall_Daub_btn);
             this.Controls.Add(this.Interim_Daub_btn);
             this.Controls.Add(this.Messages_out);
@@ -530,6 +552,8 @@
         private System.Windows.Forms.Label o3;
         private System.Windows.Forms.Label o4;
         private System.Windows.Forms.Label o5;
+        private System.Windows.Forms.Label MessageOutlbl;
+        private System.Windows.Forms.Label IncomingMessagelbl;
     }
 }
 
