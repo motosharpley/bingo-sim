@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
 
 namespace bingo_sim
 {
@@ -36,12 +39,41 @@ namespace bingo_sim
             }
         }
 
+        public static void Subscribe()
+        {
+            try
+            {
+                TcpClient client = new TcpClient("127.0.0.1", port: 3000);
+                StreamReader reader = new StreamReader(client.GetStream());
+                StreamWriter writer = new StreamWriter(client.GetStream());
+                String s = String.Empty;
+                while (!s.Equals("Exit"))
+                {
+                    Console.Write("Enter a string to send to the server: ");
+                    s = Console.ReadLine();
+                    Console.WriteLine();
+                    writer.WriteLine(s);
+                    writer.Flush();
+                    String server_string = reader.ReadLine();
+                    Console.WriteLine(server_string);
+                }
+                reader.Close();
+                writer.Close();
+                client.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+
 
         private void Connect_btn_Click(object sender, EventArgs e)
         {
             //Connect to bingo server
             // Connect Message format |SUBSCRIBE|Redfire_92|IP_ADDRESS|10.7.3.87|
             // Response Message format |SUBSCRIBE|<SubNumber|ENGINE_ID|<EngineID>|
+            Subscribe();
         }
 
         private void Spin_btn_Click(object sender, EventArgs e)
