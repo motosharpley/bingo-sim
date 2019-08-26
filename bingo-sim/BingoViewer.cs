@@ -78,6 +78,7 @@ namespace bingo_sim
             // Spin Response Message format |SPIN_EVENT|<SubNumber>|ENGINE_ID|<EngineID>|GAME_ID|<GameID>|CREDITS_BET|<CreditQuantity>|BET_LEVEL|<Multiplier>|BALL_DRAW|
             //  <BallDraw>|BASE_CARD|<BaseCardSpots>|BASE_DAUB|<BaseDaubs>|COVER_DAUB|<CoverDaubs>|BONUS_TYPE|<BonusID>|BONUS_CARD|<BonusCardSpots>|BONUS_DAUB|<BonusDaubs>|
             //  BASE_WIN|<BaseWinValue>|COVER_WIN|<CoverWinValue>|BONUS_WIN|<BonusWinValue>|BASE_NET|<BaseCreditsNet>|BONUS_NET|<BonusCreditsNet>|TOTAL_NET|<TotalCreditsNet>|
+
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
@@ -118,6 +119,16 @@ namespace bingo_sim
         {
             // Display incoming message
             // Incoming messages SUBSCRIBE, SPIN_EVENT, PREVIEW_CARD, (PLAY_PREVIEW)SPIN_EVENT
+        }
+
+        private void Credits_Bet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Bet_Level_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

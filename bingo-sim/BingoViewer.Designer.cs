@@ -64,6 +64,10 @@
             this.Coverall_Daub_btn = new System.Windows.Forms.RadioButton();
             this.MessageOutlbl = new System.Windows.Forms.Label();
             this.IncomingMessagelbl = new System.Windows.Forms.Label();
+            this.Credits_Bet = new System.Windows.Forms.TextBox();
+            this.Bet_Level = new System.Windows.Forms.TextBox();
+            this.Credit_betlbl = new System.Windows.Forms.Label();
+            this.Bet_levellbl = new System.Windows.Forms.Label();
             this.BingoCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -433,16 +437,16 @@
             // Messages_in
             // 
             this.Messages_in.FormattingEnabled = true;
-            this.Messages_in.Location = new System.Drawing.Point(651, 39);
+            this.Messages_in.Location = new System.Drawing.Point(732, 21);
             this.Messages_in.Name = "Messages_in";
-            this.Messages_in.Size = new System.Drawing.Size(179, 433);
+            this.Messages_in.Size = new System.Drawing.Size(206, 433);
             this.Messages_in.TabIndex = 5;
             this.Messages_in.SelectedIndexChanged += new System.EventHandler(this.Messages_in_SelectedIndexChanged);
             // 
             // Messages_out
             // 
             this.Messages_out.FormattingEnabled = true;
-            this.Messages_out.Location = new System.Drawing.Point(423, 39);
+            this.Messages_out.Location = new System.Drawing.Point(531, 21);
             this.Messages_out.Name = "Messages_out";
             this.Messages_out.Size = new System.Drawing.Size(179, 433);
             this.Messages_out.TabIndex = 6;
@@ -475,7 +479,7 @@
             // MessageOutlbl
             // 
             this.MessageOutlbl.AutoSize = true;
-            this.MessageOutlbl.Location = new System.Drawing.Point(461, 23);
+            this.MessageOutlbl.Location = new System.Drawing.Point(569, 5);
             this.MessageOutlbl.Name = "MessageOutlbl";
             this.MessageOutlbl.Size = new System.Drawing.Size(101, 13);
             this.MessageOutlbl.TabIndex = 9;
@@ -484,18 +488,58 @@
             // IncomingMessagelbl
             // 
             this.IncomingMessagelbl.AutoSize = true;
-            this.IncomingMessagelbl.Location = new System.Drawing.Point(694, 23);
+            this.IncomingMessagelbl.Location = new System.Drawing.Point(802, 5);
             this.IncomingMessagelbl.Name = "IncomingMessagelbl";
             this.IncomingMessagelbl.Size = new System.Drawing.Size(96, 13);
             this.IncomingMessagelbl.TabIndex = 10;
             this.IncomingMessagelbl.Text = "Incoming Message";
             // 
-            // Form1
+            // Credits_Bet
+            // 
+            this.Credits_Bet.Location = new System.Drawing.Point(406, 282);
+            this.Credits_Bet.Name = "Credits_Bet";
+            this.Credits_Bet.Size = new System.Drawing.Size(100, 20);
+            this.Credits_Bet.TabIndex = 11;
+            this.Credits_Bet.Text = "credits bet";
+            this.Credits_Bet.TextChanged += new System.EventHandler(this.Credits_Bet_TextChanged);
+            // 
+            // Bet_Level
+            // 
+            this.Bet_Level.Location = new System.Drawing.Point(406, 358);
+            this.Bet_Level.Name = "Bet_Level";
+            this.Bet_Level.Size = new System.Drawing.Size(100, 20);
+            this.Bet_Level.TabIndex = 12;
+            this.Bet_Level.Text = "bet level";
+            this.Bet_Level.TextChanged += new System.EventHandler(this.Bet_Level_TextChanged);
+            // 
+            // Credit_betlbl
+            // 
+            this.Credit_betlbl.AutoSize = true;
+            this.Credit_betlbl.Location = new System.Drawing.Point(403, 266);
+            this.Credit_betlbl.Name = "Credit_betlbl";
+            this.Credit_betlbl.Size = new System.Drawing.Size(58, 13);
+            this.Credit_betlbl.TabIndex = 13;
+            this.Credit_betlbl.Text = "Credits Bet";
+            // 
+            // Bet_levellbl
+            // 
+            this.Bet_levellbl.AutoSize = true;
+            this.Bet_levellbl.Location = new System.Drawing.Point(406, 339);
+            this.Bet_levellbl.Name = "Bet_levellbl";
+            this.Bet_levellbl.Size = new System.Drawing.Size(52, 13);
+            this.Bet_levellbl.TabIndex = 14;
+            this.Bet_levellbl.Text = "Bet Level";
+            // 
+            // BingoViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(862, 484);
+            this.ClientSize = new System.Drawing.Size(957, 484);
+            this.Controls.Add(this.Bet_levellbl);
+            this.Controls.Add(this.Credit_betlbl);
+            this.Controls.Add(this.Bet_Level);
+            this.Controls.Add(this.Credits_Bet);
             this.Controls.Add(this.IncomingMessagelbl);
             this.Controls.Add(this.MessageOutlbl);
             this.Controls.Add(this.Coverall_Daub_btn);
@@ -507,7 +551,7 @@
             this.Controls.Add(this.Spin_btn);
             this.Controls.Add(this.Connect_btn);
             this.Controls.Add(this.BingoCard);
-            this.Name = "Form1";
+            this.Name = "BingoViewer";
             this.Text = "Form1";
             this.BingoCard.ResumeLayout(false);
             this.BingoCard.PerformLayout();
@@ -554,6 +598,10 @@
         private System.Windows.Forms.Label o5;
         private System.Windows.Forms.Label MessageOutlbl;
         private System.Windows.Forms.Label IncomingMessagelbl;
+        private System.Windows.Forms.TextBox Credits_Bet;
+        private System.Windows.Forms.TextBox Bet_Level;
+        private System.Windows.Forms.Label Credit_betlbl;
+        private System.Windows.Forms.Label Bet_levellbl;
     }
 }
 
