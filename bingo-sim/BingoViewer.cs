@@ -21,6 +21,29 @@ namespace bingo_sim
             AddBingoNumToCard();
         }
 
+        // Spin Event Variables
+        private int SPIN_EVENT;
+        private string ENGINE_ID;
+        private string GAME_ID;
+        private int CREDITS_BET;
+        private int BET_LEVEL;
+        private int[] BALL_DRAW;
+        private int[] BASE_CARD;
+        private int BASE_DAUB;
+        private int COVER_DAUB;
+        private int BONUS_TYPE;
+        private int[] BONUS_CARD;
+        private int BONUS_DAUB;
+        private int BASE_WIN;
+        private int COVER_WIN;
+        private int BONUS_WIN;
+        private int BASE_NET;
+        private int BONUS_NET;
+        private int TOTAL_NET;
+
+
+
+
         // Dummy Data Bingo Card Numbers
         int[] bingoNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 

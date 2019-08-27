@@ -496,7 +496,7 @@
             // 
             // Credits_Bet
             // 
-            this.Credits_Bet.Location = new System.Drawing.Point(406, 282);
+            this.Credits_Bet.Location = new System.Drawing.Point(394, 397);
             this.Credits_Bet.Name = "Credits_Bet";
             this.Credits_Bet.Size = new System.Drawing.Size(100, 20);
             this.Credits_Bet.TabIndex = 11;
@@ -505,7 +505,7 @@
             // 
             // Bet_Level
             // 
-            this.Bet_Level.Location = new System.Drawing.Point(406, 358);
+            this.Bet_Level.Location = new System.Drawing.Point(394, 449);
             this.Bet_Level.Name = "Bet_Level";
             this.Bet_Level.Size = new System.Drawing.Size(100, 20);
             this.Bet_Level.TabIndex = 12;
@@ -515,7 +515,7 @@
             // Credit_betlbl
             // 
             this.Credit_betlbl.AutoSize = true;
-            this.Credit_betlbl.Location = new System.Drawing.Point(403, 266);
+            this.Credit_betlbl.Location = new System.Drawing.Point(394, 381);
             this.Credit_betlbl.Name = "Credit_betlbl";
             this.Credit_betlbl.Size = new System.Drawing.Size(58, 13);
             this.Credit_betlbl.TabIndex = 13;
@@ -524,7 +524,7 @@
             // Bet_levellbl
             // 
             this.Bet_levellbl.AutoSize = true;
-            this.Bet_levellbl.Location = new System.Drawing.Point(406, 339);
+            this.Bet_levellbl.Location = new System.Drawing.Point(394, 430);
             this.Bet_levellbl.Name = "Bet_levellbl";
             this.Bet_levellbl.Size = new System.Drawing.Size(52, 13);
             this.Bet_levellbl.TabIndex = 14;
