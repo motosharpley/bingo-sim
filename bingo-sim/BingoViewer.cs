@@ -41,6 +41,10 @@ namespace bingo_sim
         private int BONUS_NET;
         private int TOTAL_NET;
 
+        // Subscription Event Variables
+        private string EngineID;
+        private IPAddress IP_ADDRESS;
+        private int SubNumber;
 
 
 
@@ -92,6 +96,9 @@ namespace bingo_sim
             // Connect Message format |SUBSCRIBE|Redfire_92|IP_ADDRESS|10.7.3.87|
             // Response Message format |SUBSCRIBE|<SubNumber|ENGINE_ID|<EngineID>|
             Subscribe();
+
+            // Build Subscribe Request String
+            string SubRequest = "|SUBSCRIBE|" + EngineID + "|IP_ADDRESS|" + IP_ADDRESS + "|";
         }
 
         private void Spin_btn_Click(object sender, EventArgs e)
@@ -102,6 +109,8 @@ namespace bingo_sim
             //  <BallDraw>|BASE_CARD|<BaseCardSpots>|BASE_DAUB|<BaseDaubs>|COVER_DAUB|<CoverDaubs>|BONUS_TYPE|<BonusID>|BONUS_CARD|<BonusCardSpots>|BONUS_DAUB|<BonusDaubs>|
             //  BASE_WIN|<BaseWinValue>|COVER_WIN|<CoverWinValue>|BONUS_WIN|<BonusWinValue>|BASE_NET|<BaseCreditsNet>|BONUS_NET|<BonusCreditsNet>|TOTAL_NET|<TotalCreditsNet>|
 
+            // Build Spin Request String
+            string SpinRequest = "|NEW_SPIN|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
@@ -109,6 +118,9 @@ namespace bingo_sim
             // Send Preview Card Request
             // Preview Card Request Message format |PREVIEW_CARD|<SubNumber>|ENGINE_ID|<EngineID>|
             // Response Message format |PREVIEW_CARD|<SubNumber>|ENGINE_ID|<EngineID>|GAME_ID|<GameID>|BASE_CARD|<BaseCardSpots>|
+
+            // Build Preview Card Request String
+            string PreviewRequest = "|PREVIEW_CARD|" + SubNumber + "|ENGINE_ID|" + EngineID + "|";
         }
 
         private void Play_preview_btn_Click(object sender, EventArgs e)
@@ -118,6 +130,9 @@ namespace bingo_sim
             // Play Preview Response Message format |SPIN_EVENT|<SubNumber>|ENGINE_ID|<EngineID>|GAME_ID|<GameID>|CREDITS_BET|<CreditQuantity>|BET_LEVEL|<Multiplier>|BALL_DRAW|
             //  <BallDraw>|BASE_CARD|<BaseCardSpots>|BASE_DAUB|<BaseDaubs>|COVER_DAUB|<CoverDaubs>|BONUS_TYPE|<BonusID>|BONUS_CARD|<BonusCardSpots>|BONUS_DAUB|<BonusDaubs>|
             //  BASE_WIN|<BaseWinValue>|COVER_WIN|<CoverWinValue>|BONUS_WIN|<BonusWinValue>|BASE_NET|<BaseCreditsNet>|BONUS_NET|<BonusCreditsNet>|TOTAL_NET|<TotalCreditsNet>|
+
+            // Build Play Preview Request String
+            string PlayPreviewRequest = "|PLAY_PREVIEW|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
         }
 
         private void Interim_Daub_btn_CheckedChanged(object sender, EventArgs e)
