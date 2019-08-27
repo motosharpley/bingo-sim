@@ -19,14 +19,15 @@ namespace bingo_sim
         {
             InitializeComponent();
             AddBingoNumToCard();
+            AddBonusNumToCard();
         }
 
         // Spin Event Variables
         private int SPIN_EVENT;
         private string ENGINE_ID;
         private string GAME_ID;
-        private int CREDITS_BET;
-        private int BET_LEVEL;
+        private int CREDITS_BET = 25;
+        private int BET_LEVEL = 1;
         private int[] BALL_DRAW;
         private int[] BASE_CARD;
         private int BASE_DAUB;
@@ -42,9 +43,9 @@ namespace bingo_sim
         private int TOTAL_NET;
 
         // Subscription Event Variables
-        private string EngineID;
-        private IPAddress IP_ADDRESS;
-        private int SubNumber;
+        private string EngineID = "Redfire_92";
+        private string IP_ADDRESS = "127.0.0.1";
+        private int SubNumber = 1;
 
 
 
@@ -55,6 +56,21 @@ namespace bingo_sim
         {
             int i = 0;
             foreach (Control control in BingoCard.Controls)
+            {
+                Label BingoCardLabel = control as Label;
+                if (BingoCardLabel != null)
+                {
+                    int bingonum = bingoNums[i];
+                    BingoCardLabel.Text = bingonum.ToString();
+                    i++;
+                }
+            }
+        }
+
+        private void AddBonusNumToCard()
+        {
+            int i = 0;
+            foreach (Control control in BonusCard.Controls)
             {
                 Label BingoCardLabel = control as Label;
                 if (BingoCardLabel != null)
@@ -99,6 +115,7 @@ namespace bingo_sim
 
             // Build Subscribe Request String
             string SubRequest = "|SUBSCRIBE|" + EngineID + "|IP_ADDRESS|" + IP_ADDRESS + "|";
+            Console.WriteLine(SubRequest);
         }
 
         private void Spin_btn_Click(object sender, EventArgs e)
@@ -111,6 +128,7 @@ namespace bingo_sim
 
             // Build Spin Request String
             string SpinRequest = "|NEW_SPIN|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
+            Console.WriteLine(SpinRequest);
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
@@ -121,6 +139,7 @@ namespace bingo_sim
 
             // Build Preview Card Request String
             string PreviewRequest = "|PREVIEW_CARD|" + SubNumber + "|ENGINE_ID|" + EngineID + "|";
+            Console.WriteLine(PreviewRequest);
         }
 
         private void Play_preview_btn_Click(object sender, EventArgs e)
@@ -133,6 +152,7 @@ namespace bingo_sim
 
             // Build Play Preview Request String
             string PlayPreviewRequest = "|PLAY_PREVIEW|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
+            Console.WriteLine(PlayPreviewRequest);
         }
 
         private void Interim_Daub_btn_CheckedChanged(object sender, EventArgs e)
