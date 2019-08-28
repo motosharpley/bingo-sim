@@ -26,8 +26,8 @@ namespace bingo_sim
         private int SPIN_EVENT;
         private string ENGINE_ID;
         private string GAME_ID;
-        private int CREDITS_BET = 25;
-        private int BET_LEVEL = 1;
+        private int CREDITS_BET;
+        private int BET_LEVEL;
         private int[] BALL_DRAW;
         private int[] BASE_CARD;
         private int BASE_DAUB;
@@ -181,12 +181,16 @@ namespace bingo_sim
 
         private void BetLevel_ValueChanged(object sender, EventArgs e)
         {
-
+            int bet = Convert.ToInt32(BetLevel.Value);
+            BET_LEVEL = bet;
+            Console.WriteLine(BET_LEVEL);
         }
 
         private void CreditsBet_ValueChanged(object sender, EventArgs e)
         {
-
+            int credit = Convert.ToInt32(CreditsBet.Value);
+            CREDITS_BET = credit;
+            Console.WriteLine(CreditsBet.Value);
         }
     }
 

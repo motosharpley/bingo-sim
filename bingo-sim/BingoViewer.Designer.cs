@@ -96,6 +96,7 @@
             this.BonusCardlbl = new System.Windows.Forms.Label();
             this.BetLevel = new System.Windows.Forms.NumericUpDown();
             this.CreditsBet = new System.Windows.Forms.NumericUpDown();
+            this.BetCreditlbl = new System.Windows.Forms.Label();
             this.BingoCard.SuspendLayout();
             this.BonusCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BetLevel)).BeginInit();
@@ -889,38 +890,30 @@
             // BetLevel
             // 
             this.BetLevel.Location = new System.Drawing.Point(444, 449);
-            this.BetLevel.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.BetLevel.Name = "BetLevel";
             this.BetLevel.Size = new System.Drawing.Size(58, 20);
             this.BetLevel.TabIndex = 18;
-            this.BetLevel.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.BetLevel.ValueChanged += new System.EventHandler(this.BetLevel_ValueChanged);
             // 
             // CreditsBet
             // 
             this.CreditsBet.Location = new System.Drawing.Point(576, 449);
-            this.CreditsBet.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.CreditsBet.Name = "CreditsBet";
             this.CreditsBet.Size = new System.Drawing.Size(58, 20);
             this.CreditsBet.TabIndex = 19;
-            this.CreditsBet.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.CreditsBet.ValueChanged += new System.EventHandler(this.CreditsBet_ValueChanged);
+            // 
+            // BetCreditlbl
+            // 
+            this.BetCreditlbl.AutoSize = true;
+            this.BetCreditlbl.BackColor = System.Drawing.Color.White;
+            this.BetCreditlbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BetCreditlbl.ForeColor = System.Drawing.Color.Red;
+            this.BetCreditlbl.Location = new System.Drawing.Point(441, 423);
+            this.BetCreditlbl.Name = "BetCreditlbl";
+            this.BetCreditlbl.Size = new System.Drawing.Size(181, 15);
+            this.BetCreditlbl.TabIndex = 20;
+            this.BetCreditlbl.Text = "Set Bet Level and Cedits before spin";
             // 
             // BingoViewer
             // 
@@ -928,6 +921,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 484);
+            this.Controls.Add(this.BetCreditlbl);
             this.Controls.Add(this.CreditsBet);
             this.Controls.Add(this.BetLevel);
             this.Controls.Add(this.BonusCardlbl);
@@ -1029,6 +1023,7 @@
         private System.Windows.Forms.Label BonusCardlbl;
         private System.Windows.Forms.NumericUpDown BetLevel;
         private System.Windows.Forms.NumericUpDown CreditsBet;
+        private System.Windows.Forms.Label BetCreditlbl;
     }
 }
 
