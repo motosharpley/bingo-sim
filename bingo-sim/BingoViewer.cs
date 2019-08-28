@@ -179,14 +179,14 @@ namespace bingo_sim
             // Incoming messages SUBSCRIBE, SPIN_EVENT, PREVIEW_CARD, (PLAY_PREVIEW)SPIN_EVENT
         }
 
-        private void Credits_Bet_TextChanged(object sender, EventArgs e)
+        private void BetLevel_ValueChanged(object sender, EventArgs e)
         {
-            //CREDITS_BET = e;
+
         }
 
-        private void Bet_Level_TextChanged(object sender, EventArgs e)
+        private void CreditsBet_ValueChanged(object sender, EventArgs e)
         {
-            // BET_LEVEL = e;
+
         }
     }
 

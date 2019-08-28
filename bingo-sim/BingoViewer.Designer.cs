@@ -64,8 +64,6 @@
             this.Coverall_Daub_btn = new System.Windows.Forms.RadioButton();
             this.MessageOutlbl = new System.Windows.Forms.Label();
             this.IncomingMessagelbl = new System.Windows.Forms.Label();
-            this.Credits_Bet = new System.Windows.Forms.TextBox();
-            this.Bet_Level = new System.Windows.Forms.TextBox();
             this.Credit_betlbl = new System.Windows.Forms.Label();
             this.Bet_levellbl = new System.Windows.Forms.Label();
             this.BonusCard = new System.Windows.Forms.TableLayoutPanel();
@@ -96,8 +94,12 @@
             this.label25 = new System.Windows.Forms.Label();
             this.BaseCardlbl = new System.Windows.Forms.Label();
             this.BonusCardlbl = new System.Windows.Forms.Label();
+            this.BetLevel = new System.Windows.Forms.NumericUpDown();
+            this.CreditsBet = new System.Windows.Forms.NumericUpDown();
             this.BingoCard.SuspendLayout();
             this.BonusCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BetLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CreditsBet)).BeginInit();
             this.SuspendLayout();
             // 
             // BingoCard
@@ -523,28 +525,10 @@
             this.IncomingMessagelbl.TabIndex = 10;
             this.IncomingMessagelbl.Text = "Incoming Message";
             // 
-            // Credits_Bet
-            // 
-            this.Credits_Bet.Location = new System.Drawing.Point(643, 449);
-            this.Credits_Bet.Name = "Credits_Bet";
-            this.Credits_Bet.Size = new System.Drawing.Size(100, 20);
-            this.Credits_Bet.TabIndex = 11;
-            this.Credits_Bet.Text = "credits bet";
-            this.Credits_Bet.TextChanged += new System.EventHandler(this.Credits_Bet_TextChanged);
-            // 
-            // Bet_Level
-            // 
-            this.Bet_Level.Location = new System.Drawing.Point(463, 449);
-            this.Bet_Level.Name = "Bet_Level";
-            this.Bet_Level.Size = new System.Drawing.Size(100, 20);
-            this.Bet_Level.TabIndex = 12;
-            this.Bet_Level.Text = "bet level";
-            this.Bet_Level.TextChanged += new System.EventHandler(this.Bet_Level_TextChanged);
-            // 
             // Credit_betlbl
             // 
             this.Credit_betlbl.AutoSize = true;
-            this.Credit_betlbl.Location = new System.Drawing.Point(579, 454);
+            this.Credit_betlbl.Location = new System.Drawing.Point(512, 454);
             this.Credit_betlbl.Name = "Credit_betlbl";
             this.Credit_betlbl.Size = new System.Drawing.Size(58, 13);
             this.Credit_betlbl.TabIndex = 13;
@@ -553,7 +537,7 @@
             // Bet_levellbl
             // 
             this.Bet_levellbl.AutoSize = true;
-            this.Bet_levellbl.Location = new System.Drawing.Point(405, 454);
+            this.Bet_levellbl.Location = new System.Drawing.Point(386, 454);
             this.Bet_levellbl.Name = "Bet_levellbl";
             this.Bet_levellbl.Size = new System.Drawing.Size(52, 13);
             this.Bet_levellbl.TabIndex = 14;
@@ -902,19 +886,55 @@
             this.BonusCardlbl.TabIndex = 17;
             this.BonusCardlbl.Text = "Bonus Card";
             // 
+            // BetLevel
+            // 
+            this.BetLevel.Location = new System.Drawing.Point(444, 449);
+            this.BetLevel.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.BetLevel.Name = "BetLevel";
+            this.BetLevel.Size = new System.Drawing.Size(58, 20);
+            this.BetLevel.TabIndex = 18;
+            this.BetLevel.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.BetLevel.ValueChanged += new System.EventHandler(this.BetLevel_ValueChanged);
+            // 
+            // CreditsBet
+            // 
+            this.CreditsBet.Location = new System.Drawing.Point(576, 449);
+            this.CreditsBet.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CreditsBet.Name = "CreditsBet";
+            this.CreditsBet.Size = new System.Drawing.Size(58, 20);
+            this.CreditsBet.TabIndex = 19;
+            this.CreditsBet.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CreditsBet.ValueChanged += new System.EventHandler(this.CreditsBet_ValueChanged);
+            // 
             // BingoViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 484);
+            this.Controls.Add(this.CreditsBet);
+            this.Controls.Add(this.BetLevel);
             this.Controls.Add(this.BonusCardlbl);
             this.Controls.Add(this.BaseCardlbl);
             this.Controls.Add(this.BonusCard);
             this.Controls.Add(this.Bet_levellbl);
             this.Controls.Add(this.Credit_betlbl);
-            this.Controls.Add(this.Bet_Level);
-            this.Controls.Add(this.Credits_Bet);
             this.Controls.Add(this.IncomingMessagelbl);
             this.Controls.Add(this.MessageOutlbl);
             this.Controls.Add(this.Coverall_Daub_btn);
@@ -932,6 +952,8 @@
             this.BingoCard.PerformLayout();
             this.BonusCard.ResumeLayout(false);
             this.BonusCard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BetLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CreditsBet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -975,8 +997,6 @@
         private System.Windows.Forms.Label o5;
         private System.Windows.Forms.Label MessageOutlbl;
         private System.Windows.Forms.Label IncomingMessagelbl;
-        private System.Windows.Forms.TextBox Credits_Bet;
-        private System.Windows.Forms.TextBox Bet_Level;
         private System.Windows.Forms.Label Credit_betlbl;
         private System.Windows.Forms.Label Bet_levellbl;
         private System.Windows.Forms.TableLayoutPanel BonusCard;
@@ -1007,6 +1027,8 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label BaseCardlbl;
         private System.Windows.Forms.Label BonusCardlbl;
+        private System.Windows.Forms.NumericUpDown BetLevel;
+        private System.Windows.Forms.NumericUpDown CreditsBet;
     }
 }
 
