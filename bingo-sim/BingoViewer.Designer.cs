@@ -94,8 +94,8 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.BaseCardlbl = new System.Windows.Forms.Label();
+            this.BonusCardlbl = new System.Windows.Forms.Label();
             this.BingoCard.SuspendLayout();
             this.BonusCard.SuspendLayout();
             this.SuspendLayout();
@@ -508,7 +508,7 @@
             // MessageOutlbl
             // 
             this.MessageOutlbl.AutoSize = true;
-            this.MessageOutlbl.Location = new System.Drawing.Point(777, 20);
+            this.MessageOutlbl.Location = new System.Drawing.Point(798, 19);
             this.MessageOutlbl.Name = "MessageOutlbl";
             this.MessageOutlbl.Size = new System.Drawing.Size(101, 13);
             this.MessageOutlbl.TabIndex = 9;
@@ -525,7 +525,7 @@
             // 
             // Credits_Bet
             // 
-            this.Credits_Bet.Location = new System.Drawing.Point(537, 449);
+            this.Credits_Bet.Location = new System.Drawing.Point(643, 449);
             this.Credits_Bet.Name = "Credits_Bet";
             this.Credits_Bet.Size = new System.Drawing.Size(100, 20);
             this.Credits_Bet.TabIndex = 11;
@@ -534,7 +534,7 @@
             // 
             // Bet_Level
             // 
-            this.Bet_Level.Location = new System.Drawing.Point(394, 449);
+            this.Bet_Level.Location = new System.Drawing.Point(463, 449);
             this.Bet_Level.Name = "Bet_Level";
             this.Bet_Level.Size = new System.Drawing.Size(100, 20);
             this.Bet_Level.TabIndex = 12;
@@ -544,7 +544,7 @@
             // Credit_betlbl
             // 
             this.Credit_betlbl.AutoSize = true;
-            this.Credit_betlbl.Location = new System.Drawing.Point(537, 433);
+            this.Credit_betlbl.Location = new System.Drawing.Point(579, 454);
             this.Credit_betlbl.Name = "Credit_betlbl";
             this.Credit_betlbl.Size = new System.Drawing.Size(58, 13);
             this.Credit_betlbl.TabIndex = 13;
@@ -553,7 +553,7 @@
             // Bet_levellbl
             // 
             this.Bet_levellbl.AutoSize = true;
-            this.Bet_levellbl.Location = new System.Drawing.Point(394, 430);
+            this.Bet_levellbl.Location = new System.Drawing.Point(405, 454);
             this.Bet_levellbl.Name = "Bet_levellbl";
             this.Bet_levellbl.Size = new System.Drawing.Size(52, 13);
             this.Bet_levellbl.TabIndex = 14;
@@ -882,23 +882,25 @@
             this.label25.Text = "label25";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label26
+            // BaseCardlbl
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(142, 20);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(56, 13);
-            this.label26.TabIndex = 16;
-            this.label26.Text = "Base Card";
+            this.BaseCardlbl.AutoSize = true;
+            this.BaseCardlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BaseCardlbl.Location = new System.Drawing.Point(120, 9);
+            this.BaseCardlbl.Name = "BaseCardlbl";
+            this.BaseCardlbl.Size = new System.Drawing.Size(135, 29);
+            this.BaseCardlbl.TabIndex = 16;
+            this.BaseCardlbl.Text = "Base Card";
             // 
-            // label27
+            // BonusCardlbl
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(511, 20);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(62, 13);
-            this.label27.TabIndex = 17;
-            this.label27.Text = "Bonus Card";
+            this.BonusCardlbl.AutoSize = true;
+            this.BonusCardlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BonusCardlbl.Location = new System.Drawing.Point(488, 7);
+            this.BonusCardlbl.Name = "BonusCardlbl";
+            this.BonusCardlbl.Size = new System.Drawing.Size(149, 29);
+            this.BonusCardlbl.TabIndex = 17;
+            this.BonusCardlbl.Text = "Bonus Card";
             // 
             // BingoViewer
             // 
@@ -906,8 +908,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 484);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.label26);
+            this.Controls.Add(this.BonusCardlbl);
+            this.Controls.Add(this.BaseCardlbl);
             this.Controls.Add(this.BonusCard);
             this.Controls.Add(this.Bet_levellbl);
             this.Controls.Add(this.Credit_betlbl);
@@ -1003,8 +1005,8 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label BaseCardlbl;
+        private System.Windows.Forms.Label BonusCardlbl;
     }
 }
 

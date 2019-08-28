@@ -181,12 +181,12 @@ namespace bingo_sim
 
         private void Credits_Bet_TextChanged(object sender, EventArgs e)
         {
-
+            //CREDITS_BET = e;
         }
 
         private void Bet_Level_TextChanged(object sender, EventArgs e)
         {
-
+            // BET_LEVEL = e;
         }
     }
 
