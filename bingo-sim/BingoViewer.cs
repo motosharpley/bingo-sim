@@ -163,6 +163,7 @@ namespace bingo_sim
 
             // Build Preview Card Request String
             string PreviewRequest = "|PREVIEW_CARD|" + SubNumber + "|ENGINE_ID|" + EngineID + "|";
+            SendMessage(PreviewRequest, client);
             Console.WriteLine(PreviewRequest);
         }
 
@@ -176,6 +177,7 @@ namespace bingo_sim
 
             // Build Play Preview Request String
             string PlayPreviewRequest = "|PLAY_PREVIEW|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
+            SendMessage(PlayPreviewRequest, client);
             Console.WriteLine(PlayPreviewRequest);
         }
 
