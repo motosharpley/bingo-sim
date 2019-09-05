@@ -43,14 +43,19 @@ namespace bingo_sim
         private int TOTAL_NET;
 
         // Subscription Event Variables
-        private string EngineID = "Redfire_92";
+        private string GameName = "start_up_value";
+        private string EngineID = "return_value";
         private string IP_ADDRESS = "127.0.0.1";
         private int SubNumber = 1;
 
 
 
+
+
         // Dummy Data Bingo Card Numbers
         int[] bingoNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+
+
 
         private void AddBingoNumToCard()
         {
@@ -82,16 +87,22 @@ namespace bingo_sim
             }
         }
 
-        public static void Subscribe()
+        public TcpClient client = new TcpClient();
+
+        public void Subscribe(TcpClient client)
         {
+
             try
             {
-                TcpClient client = new TcpClient("127.0.0.1", port: 3000);
+                //TcpClient client = new TcpClient();
+                client.Connect("127.0.0.1", 3000);
                 StreamReader reader = new StreamReader(client.GetStream());
-                StreamWriter writer = new StreamWriter(client.GetStream());
-                String s = "Hello Bingo";
-                writer.WriteLine(s);
-                writer.Flush();
+                string SubRequest = "|SUBSCRIBE|" + GameName + "|IP_ADDRESS|" + IP_ADDRESS + "|";
+                SendMessage(SubRequest, client);
+                //StreamWriter writer = new StreamWriter(client.GetStream());
+                //String s = "hello Bingo";
+                //writer.WriteLine(s);
+                //writer.Flush();
                 String server_string = reader.ReadLine();
                 Console.WriteLine(server_string);
 
@@ -105,17 +116,29 @@ namespace bingo_sim
             }
         }
 
+        public static void SendMessage(string msg, TcpClient client)
+        {
+            // TODO ERRR Handle No Connection 
+            StreamWriter writer = new StreamWriter(client.GetStream());
+            writer.WriteLine(msg);
+            writer.Flush();
+        }
+
 
         private void Connect_btn_Click(object sender, EventArgs e)
         {
             //Connect to bingo server
             // Connect Message format |SUBSCRIBE|Redfire_92|IP_ADDRESS|10.7.3.87|
             // Response Message format |SUBSCRIBE|<SubNumber|ENGINE_ID|<EngineID>|
-            Subscribe();
-
             // Build Subscribe Request String
-            string SubRequest = "|SUBSCRIBE|" + EngineID + "|IP_ADDRESS|" + IP_ADDRESS + "|";
-            Console.WriteLine(SubRequest);
+            //string SubRequest = "|SUBSCRIBE|" + GameName + "|IP_ADDRESS|" + IP_ADDRESS + "|";
+            //Instantiate client connection
+            Subscribe(client);
+            // Send subscription message
+            //SendMessage(SubRequest, client);
+
+            
+            //Console.WriteLine(SubRequest);
         }
 
         private void Spin_btn_Click(object sender, EventArgs e)
@@ -128,6 +151,7 @@ namespace bingo_sim
 
             // Build Spin Request String
             string SpinRequest = "|NEW_SPIN|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
+            SendMessage(SpinRequest, client);
             Console.WriteLine(SpinRequest);
         }
 
