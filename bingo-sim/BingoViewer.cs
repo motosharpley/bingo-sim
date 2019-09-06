@@ -124,6 +124,13 @@ namespace bingo_sim
             writer.Flush();
         }
 
+        public static void ReceiveMessage(TcpClient client)
+        {
+            StreamReader reader = new StreamReader(client.GetStream());
+            String server_string = reader.ReadLine();
+            Console.WriteLine(server_string);
+        }
+
 
         private void Connect_btn_Click(object sender, EventArgs e)
         {
@@ -153,6 +160,8 @@ namespace bingo_sim
             string SpinRequest = "|NEW_SPIN|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
             SendMessage(SpinRequest, client);
             Console.WriteLine(SpinRequest);
+
+            ReceiveMessage(client);
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
@@ -165,6 +174,8 @@ namespace bingo_sim
             string PreviewRequest = "|PREVIEW_CARD|" + SubNumber + "|ENGINE_ID|" + EngineID + "|";
             SendMessage(PreviewRequest, client);
             Console.WriteLine(PreviewRequest);
+
+            ReceiveMessage(client);
         }
 
         private void Play_preview_btn_Click(object sender, EventArgs e)
@@ -179,6 +190,8 @@ namespace bingo_sim
             string PlayPreviewRequest = "|PLAY_PREVIEW|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
             SendMessage(PlayPreviewRequest, client);
             Console.WriteLine(PlayPreviewRequest);
+
+            ReceiveMessage(client);
         }
 
         private void Interim_Daub_btn_CheckedChanged(object sender, EventArgs e)
