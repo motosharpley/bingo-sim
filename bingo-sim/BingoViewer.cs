@@ -134,7 +134,7 @@ namespace bingo_sim
             //writer.Close();
         }
 
-        public static void ReceiveMessage(TcpClient client)
+        public void ReceiveMessage(TcpClient client)
         {
             Byte[] data = new Byte[1024];
             // String to store the response ASCII representation.
@@ -144,10 +144,30 @@ namespace bingo_sim
             Int32 bytes = reader.Read(data, 0, data.Length);
             responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
             string[] items = responseData.Split('|');
+
             foreach (var item in items)
             {
-                Console.WriteLine($"{item}");
+                int index = Array.IndexOf(items, item);
+                //var field = item;
+                //Console.WriteLine($"field:{field}");
+                string ItemVal = items[index + 1];
+                switch (item)
+                {
+                    case "SPIN_EVENT":                        
+                        Console.WriteLine(ItemVal);
+                        SPIN_EVENT = Int32.Parse(ItemVal);
+                        //Console.WriteLine("index of:" + $"{item} " + index);
+                        //Console.WriteLine($"{item}");
+                        break;
+                    case "ENGINE_ID":                        
+                        Console.WriteLine(ItemVal);
+                        ENGINE_ID = ItemVal;
+                        break;
+                }
+
             }
+            Console.WriteLine("spin event: " + SPIN_EVENT);
+            Console.WriteLine("engine id : " + ENGINE_ID);
             //reader.Close();
             reader.Flush();
         }
