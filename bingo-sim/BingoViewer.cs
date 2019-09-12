@@ -154,20 +154,54 @@ namespace bingo_sim
                 switch (item)
                 {
                     case "SPIN_EVENT":                        
-                        Console.WriteLine(ItemVal);
+                        //Console.WriteLine(ItemVal);
                         SPIN_EVENT = Int32.Parse(ItemVal);
                         //Console.WriteLine("index of:" + $"{item} " + index);
                         //Console.WriteLine($"{item}");
                         break;
                     case "ENGINE_ID":                        
-                        Console.WriteLine(ItemVal);
+                        //Console.WriteLine(ItemVal);
                         ENGINE_ID = ItemVal;
+                        break;
+                    case "GAME_ID":
+                        //Console.WriteLine(ItemVal);
+                        GAME_ID = ItemVal;
+                        break;
+                    case "CREDITS_BET":
+                        //Console.WriteLine(ItemVal);
+                        CREDITS_BET = Int32.Parse(ItemVal);
+                        break;
+                    case "BET_LEVEL":
+                        //Console.WriteLine(ItemVal);
+                        BET_LEVEL = Int32.Parse(ItemVal);
+                        break;
+                    case "BALL_DRAW":
+                        //Console.WriteLine(ItemVal.GetType());
+                        string[] ballArray = ItemVal.Split(',');
+                        BALL_DRAW = Array.ConvertAll(ballArray, int.Parse);
                         break;
                 }
 
             }
             Console.WriteLine("spin event: " + SPIN_EVENT);
             Console.WriteLine("engine id : " + ENGINE_ID);
+            Console.WriteLine("game id : " + GAME_ID);
+            Console.WriteLine("credits bet : " + CREDITS_BET);
+            Console.WriteLine("bet level : " + BET_LEVEL);
+
+            // log out Ball Draw Arrary
+            if(BALL_DRAW != null)
+            {
+                Console.Write("\nball draw: ");
+                for (var i = 0; i < BALL_DRAW.Length; i++)
+                {
+                    Console.Write("{0}  ", BALL_DRAW[i]);
+                }
+                Console.Write("\n");
+            }
+
+            // End Ball Draw log
+
             //reader.Close();
             reader.Flush();
         }
@@ -254,14 +288,14 @@ namespace bingo_sim
         {
             int bet = Convert.ToInt32(BetLevel.Value);
             BET_LEVEL = bet;
-            Console.WriteLine(BET_LEVEL);
+            //Console.WriteLine(BET_LEVEL);
         }
 
         private void CreditsBet_ValueChanged(object sender, EventArgs e)
         {
             int credit = Convert.ToInt32(CreditsBet.Value);
             CREDITS_BET = credit;
-            Console.WriteLine(CreditsBet.Value);
+            //Console.WriteLine(CreditsBet.Value);
         }
 
     }
