@@ -197,6 +197,10 @@ namespace bingo_sim
                         COVER_DAUB = ItemVal.Split(',');
                         //TODO convert to int Array --- Array.ConvertAll(basedaub, int.Parse);
                         break;
+                    case "BONUS_TYPE":
+                        //Console.WriteLine(ItemVal);
+                        BONUS_TYPE = Int32.Parse(ItemVal);
+                        break;
 
                 }
 
@@ -239,6 +243,7 @@ namespace bingo_sim
                 Console.Write("\n");
             }
             // End Cover Daub log
+            Console.WriteLine("bonus type : " + BONUS_TYPE);
 
             //reader.Close();
             reader.Flush();
