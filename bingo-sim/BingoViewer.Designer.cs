@@ -58,8 +58,6 @@
             this.Spin_btn = new System.Windows.Forms.Button();
             this.Preview_btn = new System.Windows.Forms.Button();
             this.Play_preview_btn = new System.Windows.Forms.Button();
-            this.Messages_in = new System.Windows.Forms.ListBox();
-            this.Messages_out = new System.Windows.Forms.ListBox();
             this.Interim_Daub_btn = new System.Windows.Forms.RadioButton();
             this.Coverall_Daub_btn = new System.Windows.Forms.RadioButton();
             this.MessageOutlbl = new System.Windows.Forms.Label();
@@ -97,6 +95,8 @@
             this.BetLevel = new System.Windows.Forms.NumericUpDown();
             this.CreditsBet = new System.Windows.Forms.NumericUpDown();
             this.BetCreditlbl = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.BingoCard.SuspendLayout();
             this.BonusCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BetLevel)).BeginInit();
@@ -466,24 +466,6 @@
             this.Play_preview_btn.UseVisualStyleBackColor = true;
             this.Play_preview_btn.Click += new System.EventHandler(this.Play_preview_btn_Click);
             // 
-            // Messages_in
-            // 
-            this.Messages_in.FormattingEnabled = true;
-            this.Messages_in.Location = new System.Drawing.Point(943, 36);
-            this.Messages_in.Name = "Messages_in";
-            this.Messages_in.Size = new System.Drawing.Size(206, 433);
-            this.Messages_in.TabIndex = 5;
-            this.Messages_in.SelectedIndexChanged += new System.EventHandler(this.Messages_in_SelectedIndexChanged);
-            // 
-            // Messages_out
-            // 
-            this.Messages_out.FormattingEnabled = true;
-            this.Messages_out.Location = new System.Drawing.Point(755, 36);
-            this.Messages_out.Name = "Messages_out";
-            this.Messages_out.Size = new System.Drawing.Size(179, 433);
-            this.Messages_out.TabIndex = 6;
-            this.Messages_out.SelectedIndexChanged += new System.EventHandler(this.Messages_out_SelectedIndexChanged);
-            // 
             // Interim_Daub_btn
             // 
             this.Interim_Daub_btn.AutoSize = true;
@@ -511,7 +493,7 @@
             // MessageOutlbl
             // 
             this.MessageOutlbl.AutoSize = true;
-            this.MessageOutlbl.Location = new System.Drawing.Point(798, 19);
+            this.MessageOutlbl.Location = new System.Drawing.Point(904, 21);
             this.MessageOutlbl.Name = "MessageOutlbl";
             this.MessageOutlbl.Size = new System.Drawing.Size(101, 13);
             this.MessageOutlbl.TabIndex = 9;
@@ -520,7 +502,7 @@
             // IncomingMessagelbl
             // 
             this.IncomingMessagelbl.AutoSize = true;
-            this.IncomingMessagelbl.Location = new System.Drawing.Point(1010, 20);
+            this.IncomingMessagelbl.Location = new System.Drawing.Point(909, 237);
             this.IncomingMessagelbl.Name = "IncomingMessagelbl";
             this.IncomingMessagelbl.Size = new System.Drawing.Size(96, 13);
             this.IncomingMessagelbl.TabIndex = 10;
@@ -915,12 +897,30 @@
             this.BetCreditlbl.TabIndex = 20;
             this.BetCreditlbl.Text = "Set Bet Level and Cedits before spin";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(766, 42);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(383, 186);
+            this.listBox1.TabIndex = 21;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(766, 255);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(383, 212);
+            this.listBox2.TabIndex = 22;
+            // 
             // BingoViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 484);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.BetCreditlbl);
             this.Controls.Add(this.CreditsBet);
             this.Controls.Add(this.BetLevel);
@@ -933,8 +933,6 @@
             this.Controls.Add(this.MessageOutlbl);
             this.Controls.Add(this.Coverall_Daub_btn);
             this.Controls.Add(this.Interim_Daub_btn);
-            this.Controls.Add(this.Messages_out);
-            this.Controls.Add(this.Messages_in);
             this.Controls.Add(this.Play_preview_btn);
             this.Controls.Add(this.Preview_btn);
             this.Controls.Add(this.Spin_btn);
@@ -961,8 +959,6 @@
         private System.Windows.Forms.Button Spin_btn;
         private System.Windows.Forms.Button Preview_btn;
         private System.Windows.Forms.Button Play_preview_btn;
-        private System.Windows.Forms.ListBox Messages_in;
-        private System.Windows.Forms.ListBox Messages_out;
         private System.Windows.Forms.RadioButton Interim_Daub_btn;
         private System.Windows.Forms.RadioButton Coverall_Daub_btn;
         private System.Windows.Forms.Label b2;
@@ -1024,6 +1020,8 @@
         private System.Windows.Forms.NumericUpDown BetLevel;
         private System.Windows.Forms.NumericUpDown CreditsBet;
         private System.Windows.Forms.Label BetCreditlbl;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 

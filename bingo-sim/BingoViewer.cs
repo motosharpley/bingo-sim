@@ -19,7 +19,7 @@ namespace bingo_sim
         {
             InitializeComponent();
             AddBingoNumToCard();
-            AddBonusNumToCard();
+            AddBonusNumToCard();                                  
         }
 
         // Spin Event Variables
@@ -43,13 +43,16 @@ namespace bingo_sim
         private int TOTAL_NET;
 
         // Subscription Event Variables
-        private string GameName = "start_up_value";
-        private string EngineID = "return_value";
+        private string GameName = "Redfire";
+        private string EngineID = "Redfire_AlphaTest";
         private string IP_ADDRESS = "127.0.0.1";
-        private int SubNumber = 1;
+        private int SubNumber = 9;
+
+        private string OutBoundMsg;
 
 
-
+        byte[] byteInboundBuffer = new Byte[256];
+        byte[] byteOutboundBuffer;
 
 
         // Dummy Data Bingo Card Numbers
@@ -88,23 +91,26 @@ namespace bingo_sim
         }
 
         public TcpClient client = new TcpClient();
+        
 
         public void Subscribe(TcpClient client)
         {
 
             try
             {
-                //TcpClient client = new TcpClient();
-                client.Connect("127.0.0.1", 3000);
-                StreamReader reader = new StreamReader(client.GetStream());
+                // Connect to server
+                client.Connect("127.0.0.1", 4779);
+
                 string SubRequest = "|SUBSCRIBE|" + GameName + "|IP_ADDRESS|" + IP_ADDRESS + "|";
+                OutBoundMsg = SubRequest;
+                
+                // Send Subcription message
                 SendMessage(SubRequest, client);
-                //StreamWriter writer = new StreamWriter(client.GetStream());
-                //String s = "hello Bingo";
-                //writer.WriteLine(s);
-                //writer.Flush();
-                String server_string = reader.ReadLine();
-                Console.WriteLine(server_string);
+                ReceiveMessage(client);
+                
+               // StreamReader reader = new StreamReader(client.GetStream());
+                //String server_string = reader.ReadLine();
+                //Console.WriteLine(server_string);
 
                 //reader.Close();
                 //writer.Close();
@@ -118,17 +124,32 @@ namespace bingo_sim
 
         public static void SendMessage(string msg, TcpClient client)
         {
+            
+            Byte[] data = Encoding.ASCII.GetBytes(msg);
             // TODO ERRR Handle No Connection 
-            StreamWriter writer = new StreamWriter(client.GetStream());
-            writer.WriteLine(msg);
+            NetworkStream writer = client.GetStream();
+            // writer.WriteLine(msg);
+            writer.Write(data, 0 , data.Length);
             writer.Flush();
+            //writer.Close();
         }
 
         public static void ReceiveMessage(TcpClient client)
         {
-            StreamReader reader = new StreamReader(client.GetStream());
-            String server_string = reader.ReadLine();
-            Console.WriteLine(server_string);
+            Byte[] data = new Byte[1024];
+            // String to store the response ASCII representation.
+            String responseData = String.Empty;
+            NetworkStream reader = client.GetStream();
+            // Read the first batch of the TcpServer response bytes.
+            Int32 bytes = reader.Read(data, 0, data.Length);
+            responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
+            string[] items = responseData.Split('|');
+            foreach (var item in items)
+            {
+                Console.WriteLine($"{item}");
+            }
+            //reader.Close();
+            reader.Flush();
         }
 
 
@@ -158,10 +179,11 @@ namespace bingo_sim
 
             // Build Spin Request String
             string SpinRequest = "|NEW_SPIN|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
-            SendMessage(SpinRequest, client);
-            Console.WriteLine(SpinRequest);
-
+            OutBoundMsg = SpinRequest;
+            SendMessage(OutBoundMsg, client);
+            //Console.WriteLine(SpinRequest);
             ReceiveMessage(client);
+            
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
@@ -172,8 +194,9 @@ namespace bingo_sim
 
             // Build Preview Card Request String
             string PreviewRequest = "|PREVIEW_CARD|" + SubNumber + "|ENGINE_ID|" + EngineID + "|";
-            SendMessage(PreviewRequest, client);
-            Console.WriteLine(PreviewRequest);
+            OutBoundMsg = PreviewRequest;
+            SendMessage(OutBoundMsg, client);
+            //Console.WriteLine(PreviewRequest);
 
             ReceiveMessage(client);
         }
@@ -188,8 +211,9 @@ namespace bingo_sim
 
             // Build Play Preview Request String
             string PlayPreviewRequest = "|PLAY_PREVIEW|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
-            SendMessage(PlayPreviewRequest, client);
-            Console.WriteLine(PlayPreviewRequest);
+            OutBoundMsg = PlayPreviewRequest;
+            SendMessage(OutBoundMsg, client);
+            //Console.WriteLine(PlayPreviewRequest);
 
             ReceiveMessage(client);
         }
@@ -206,18 +230,6 @@ namespace bingo_sim
             // Coverall Daub Data COVER_DAUB
         }
 
-        private void Messages_out_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Display outgoing message
-            // Outgoing messages SUBSCRIBE, NEW_SPIN, PREVIEW_CARD, PLAY_PREVIEW
-        }
-
-        private void Messages_in_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Display incoming message
-            // Incoming messages SUBSCRIBE, SPIN_EVENT, PREVIEW_CARD, (PLAY_PREVIEW)SPIN_EVENT
-        }
-
         private void BetLevel_ValueChanged(object sender, EventArgs e)
         {
             int bet = Convert.ToInt32(BetLevel.Value);
@@ -231,6 +243,7 @@ namespace bingo_sim
             CREDITS_BET = credit;
             Console.WriteLine(CreditsBet.Value);
         }
+
     }
 
 
