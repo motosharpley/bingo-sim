@@ -34,7 +34,7 @@ namespace bingo_sim
         private string[] COVER_DAUB;
         private int BONUS_TYPE;
         private int[] BONUS_CARD;
-        private int BONUS_DAUB;
+        private string[] BONUS_DAUB;
         private int BASE_WIN;
         private int COVER_WIN;
         private int BONUS_WIN;
@@ -50,13 +50,13 @@ namespace bingo_sim
 
         private string OutBoundMsg;
 
-
+        // TODO Implement into message handlers
         byte[] byteInboundBuffer = new Byte[256];
         byte[] byteOutboundBuffer;
 
 
         // Dummy Data Bingo Card Numbers
-        int[] bingoNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+        //int[] bingoNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 
 
 
@@ -206,6 +206,12 @@ namespace bingo_sim
                         string[] bonuscard = ItemVal.Split(',');
                         BONUS_CARD = Array.ConvertAll(bonuscard, int.Parse);
                         break;
+                    case "BONUS_DAUB":
+                        //Console.WriteLine(ItemVal.GetType());
+                        //string[] basedaub = ItemVal.Split(',');
+                        BONUS_DAUB = ItemVal.Split(',');
+                        //TODO convert to int Array --- Array.ConvertAll(basedaub, int.Parse);
+                        break;
 
                 }
 
@@ -249,6 +255,17 @@ namespace bingo_sim
             }
             // End Cover Daub log
             Console.WriteLine("bonus type : " + BONUS_TYPE);
+            // log out Bonus Daub Arrary
+            if (BONUS_DAUB != null)
+            {
+                Console.Write("\nbonus daub: ");
+                for (var i = 0; i < BONUS_DAUB.Length; i++)
+                {
+                    Console.Write("{0}  ", BONUS_DAUB[i]);
+                }
+                Console.Write("\n");
+            }
+            // End Bonus Daub log
 
             //reader.Close();
             reader.Flush();
