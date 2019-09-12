@@ -19,7 +19,7 @@ namespace bingo_sim
         {
             InitializeComponent();
             
-            AddBonusNumToCard();                                  
+                                              
         }
 
         // Spin Event Variables
@@ -83,7 +83,7 @@ namespace bingo_sim
                 Label BingoCardLabel = control as Label;
                 if (BingoCardLabel != null)
                 {
-                    int bingonum = bingoNums[i];
+                    int bingonum = BONUS_CARD[i];
                     BingoCardLabel.Text = bingonum.ToString();
                     i++;
                 }
@@ -201,6 +201,11 @@ namespace bingo_sim
                         //Console.WriteLine(ItemVal);
                         BONUS_TYPE = Int32.Parse(ItemVal);
                         break;
+                    case "BONUS_CARD":
+                        //Console.WriteLine(ItemVal.GetType());
+                        string[] bonuscard = ItemVal.Split(',');
+                        BONUS_CARD = Array.ConvertAll(bonuscard, int.Parse);
+                        break;
 
                 }
 
@@ -281,7 +286,7 @@ namespace bingo_sim
             //Console.WriteLine(SpinRequest);
             ReceiveMessage(client);
             AddBingoNumToCard();
-
+            AddBonusNumToCard();
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
@@ -314,6 +319,8 @@ namespace bingo_sim
             //Console.WriteLine(PlayPreviewRequest);
 
             ReceiveMessage(client);
+            AddBingoNumToCard();
+            AddBonusNumToCard();
         }
 
         private void Interim_Daub_btn_CheckedChanged(object sender, EventArgs e)
