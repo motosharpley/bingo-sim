@@ -30,8 +30,8 @@ namespace bingo_sim
         private int BET_LEVEL;
         private int[] BALL_DRAW;
         private int[] BASE_CARD;
-        private int BASE_DAUB;
-        private int COVER_DAUB;
+        private string[] BASE_DAUB;
+        private string[] COVER_DAUB;
         private int BONUS_TYPE;
         private int[] BONUS_CARD;
         private int BONUS_DAUB;
@@ -185,6 +185,18 @@ namespace bingo_sim
                         string[] basecard = ItemVal.Split(',');
                         BASE_CARD = Array.ConvertAll(basecard, int.Parse);
                         break;
+                    case "BASE_DAUB":
+                        //Console.WriteLine(ItemVal.GetType());
+                        //string[] basedaub = ItemVal.Split(',');
+                        BASE_DAUB = ItemVal.Split(',');
+                        //TODO convert to int Array --- Array.ConvertAll(basedaub, int.Parse);
+                        break;
+                    case "COVER_DAUB":
+                        //Console.WriteLine(ItemVal.GetType());
+                        //string[] coverdaub = ItemVal.Split(',');
+                        COVER_DAUB = ItemVal.Split(',');
+                        //TODO convert to int Array --- Array.ConvertAll(basedaub, int.Parse);
+                        break;
 
                 }
 
@@ -205,6 +217,28 @@ namespace bingo_sim
                 Console.Write("\n");
             }
             // End Ball Draw log
+            // log out Base Daub Arrary
+            if (BASE_DAUB != null)
+            {
+                Console.Write("\nbase daub: ");
+                for (var i = 0; i < BASE_DAUB.Length; i++)
+                {
+                    Console.Write("{0}  ", BASE_DAUB[i]);
+                }
+                Console.Write("\n");
+            }
+            // End Base Daub log
+            // log out Cover Daub Arrary
+            if (COVER_DAUB != null)
+            {
+                Console.Write("\ncover daub: ");
+                for (var i = 0; i < COVER_DAUB.Length; i++)
+                {
+                    Console.Write("{0}  ", COVER_DAUB[i]);
+                }
+                Console.Write("\n");
+            }
+            // End Cover Daub log
 
             //reader.Close();
             reader.Flush();
