@@ -18,7 +18,7 @@ namespace bingo_sim
         public BingoViewer()
         {
             InitializeComponent();
-            AddBingoNumToCard();
+            
             AddBonusNumToCard();                                  
         }
 
@@ -68,7 +68,7 @@ namespace bingo_sim
                 Label BingoCardLabel = control as Label;
                 if (BingoCardLabel != null)
                 {
-                    int bingonum = bingoNums[i];
+                    int bingonum = BASE_CARD[i];
                     BingoCardLabel.Text = bingonum.ToString();
                     i++;
                 }
@@ -180,6 +180,12 @@ namespace bingo_sim
                         string[] ballArray = ItemVal.Split(',');
                         BALL_DRAW = Array.ConvertAll(ballArray, int.Parse);
                         break;
+                    case "BASE_CARD":
+                        //Console.WriteLine(ItemVal.GetType());
+                        string[] basecard = ItemVal.Split(',');
+                        BASE_CARD = Array.ConvertAll(basecard, int.Parse);
+                        break;
+
                 }
 
             }
@@ -188,7 +194,6 @@ namespace bingo_sim
             Console.WriteLine("game id : " + GAME_ID);
             Console.WriteLine("credits bet : " + CREDITS_BET);
             Console.WriteLine("bet level : " + BET_LEVEL);
-
             // log out Ball Draw Arrary
             if(BALL_DRAW != null)
             {
@@ -199,7 +204,6 @@ namespace bingo_sim
                 }
                 Console.Write("\n");
             }
-
             // End Ball Draw log
 
             //reader.Close();
@@ -237,7 +241,8 @@ namespace bingo_sim
             SendMessage(OutBoundMsg, client);
             //Console.WriteLine(SpinRequest);
             ReceiveMessage(client);
-            
+            AddBingoNumToCard();
+
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
