@@ -44,9 +44,9 @@ namespace bingo_sim
 
         // Subscription Event Variables
         private string GameName = "Redfire";
-        private string EngineID = "Redfire_AlphaTest";
+        //private string EngineID = "Redfire_AlphaTest";
         private string IP_ADDRESS = "127.0.0.1";
-        private int SubNumber = 9;
+        private int SUB_NUMBER;
 
         private string OutBoundMsg;
 
@@ -153,9 +153,9 @@ namespace bingo_sim
                 string ItemVal = items[index + 1];
                 switch (item)
                 {
-                    case "SPIN_EVENT":                        
+                    case "SUBSCRIBE":                        
                         //Console.WriteLine(ItemVal);
-                        SPIN_EVENT = Int32.Parse(ItemVal);
+                        SUB_NUMBER = Int32.Parse(ItemVal);
                         //Console.WriteLine("index of:" + $"{item} " + index);
                         //Console.WriteLine($"{item}");
                         break;
@@ -306,7 +306,7 @@ namespace bingo_sim
         {
             //Connect to bingo server
             // Connect Message format |SUBSCRIBE|Redfire_92|IP_ADDRESS|10.7.3.87|
-            // Response Message format |SUBSCRIBE|<SubNumber|ENGINE_ID|<EngineID>|
+            // Response Message format |SUBSCRIBE|<SubNumber>|ENGINE_ID|<EngineID>|
             // Build Subscribe Request String
             //string SubRequest = "|SUBSCRIBE|" + GameName + "|IP_ADDRESS|" + IP_ADDRESS + "|";
             //Instantiate client connection
@@ -327,7 +327,7 @@ namespace bingo_sim
             //  BASE_WIN|<BaseWinValue>|COVER_WIN|<CoverWinValue>|BONUS_WIN|<BonusWinValue>|BASE_NET|<BaseCreditsNet>|BONUS_NET|<BonusCreditsNet>|TOTAL_NET|<TotalCreditsNet>|
 
             // Build Spin Request String
-            string SpinRequest = "|NEW_SPIN|" + SubNumber + "|ENGINE_ID|" + ENGINE_ID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
+            string SpinRequest = "|NEW_SPIN|" + SUB_NUMBER + "|ENGINE_ID|" + ENGINE_ID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
             OutBoundMsg = SpinRequest;
             SendMessage(OutBoundMsg, client);
             //Console.WriteLine(SpinRequest);
@@ -343,7 +343,7 @@ namespace bingo_sim
             // Response Message format |PREVIEW_CARD|<SubNumber>|ENGINE_ID|<EngineID>|GAME_ID|<GameID>|BASE_CARD|<BaseCardSpots>|
 
             // Build Preview Card Request String
-            string PreviewRequest = "|PREVIEW_CARD|" + SubNumber + "|ENGINE_ID|" + ENGINE_ID + "|";
+            string PreviewRequest = "|PREVIEW_CARD|" + SUB_NUMBER + "|ENGINE_ID|" + ENGINE_ID + "|";
             OutBoundMsg = PreviewRequest;
             SendMessage(OutBoundMsg, client);
             //Console.WriteLine(PreviewRequest);
@@ -363,7 +363,7 @@ namespace bingo_sim
             //  BASE_WIN|<BaseWinValue>|COVER_WIN|<CoverWinValue>|BONUS_WIN|<BonusWinValue>|BASE_NET|<BaseCreditsNet>|BONUS_NET|<BonusCreditsNet>|TOTAL_NET|<TotalCreditsNet>|
 
             // Build Play Preview Request String
-            string PlayPreviewRequest = "|PLAY_PREVIEW|" + SubNumber + "|ENGINE_ID|" + ENGINE_ID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
+            string PlayPreviewRequest = "|PLAY_PREVIEW|" + SUB_NUMBER + "|ENGINE_ID|" + ENGINE_ID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
             OutBoundMsg = PlayPreviewRequest;
             SendMessage(OutBoundMsg, client);
             //Console.WriteLine(PlayPreviewRequest);
