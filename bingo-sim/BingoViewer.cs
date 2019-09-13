@@ -23,7 +23,7 @@ namespace bingo_sim
         }
 
         // Spin Event Variables
-        private int SPIN_EVENT;
+        //private int SPIN_EVENT; Response Messages recieved use this key to echo back the SUB_NUMBER passed in the request 
         private string ENGINE_ID;
         private string GAME_ID;
         private int CREDITS_BET;
@@ -43,9 +43,8 @@ namespace bingo_sim
         private int TOTAL_NET;
 
         // Subscription Event Variables
-        private string GameName = "Redfire";
-        //private string EngineID = "Redfire_AlphaTest";
-        private string IP_ADDRESS = "127.0.0.1";
+        private string GameName = "Redfire"; // this field is used on start-up subscription only and server assigned GAME_ID is in reponse message for use in all subsequent requests
+        private string IP_ADDRESS = "127.0.0.1"; // this should be populated with the EGM IP Address
         private int SUB_NUMBER;
 
         private string OutBoundMsg;
@@ -240,7 +239,7 @@ namespace bingo_sim
                 }
 
             }
-            Console.WriteLine("spin event: " + SPIN_EVENT);
+            Console.WriteLine("subNumber: " + SUB_NUMBER);
             Console.WriteLine("engine id : " + ENGINE_ID);
             Console.WriteLine("game id : " + GAME_ID);
             Console.WriteLine("credits bet : " + CREDITS_BET);
