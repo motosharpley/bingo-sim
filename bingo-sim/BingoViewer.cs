@@ -212,6 +212,30 @@ namespace bingo_sim
                         BONUS_DAUB = ItemVal.Split(',');
                         //TODO convert to int Array --- Array.ConvertAll(basedaub, int.Parse);
                         break;
+                    case "BASE_WIN":
+                        //Console.WriteLine(ItemVal);
+                        BASE_WIN = Int32.Parse(ItemVal);
+                        break;
+                    case "COVER_WIN":
+                        //Console.WriteLine(ItemVal);
+                        COVER_WIN = Int32.Parse(ItemVal);
+                        break;
+                    case "BONUS_WIN":
+                        //Console.WriteLine(ItemVal);
+                        BONUS_WIN = Int32.Parse(ItemVal);
+                        break;
+                    case "BASE_NET":
+                        //Console.WriteLine(ItemVal);
+                        BASE_NET = Int32.Parse(ItemVal);
+                        break;
+                    case "BONUS_NET":
+                        //Console.WriteLine(ItemVal);
+                        BONUS_NET = Int32.Parse(ItemVal);
+                        break;
+                    case "TOTAL_NET":
+                        //Console.WriteLine(ItemVal);
+                        TOTAL_NET = Int32.Parse(ItemVal);
+                        break;
 
                 }
 
@@ -266,6 +290,12 @@ namespace bingo_sim
                 Console.Write("\n");
             }
             // End Bonus Daub log
+            Console.WriteLine("base win : " + BASE_WIN);
+            Console.WriteLine("cover win : " + COVER_WIN);
+            Console.WriteLine("bonus win : " + BONUS_WIN);
+            Console.WriteLine("base net : " + BASE_NET);
+            Console.WriteLine("bonus net : " + BONUS_NET);
+            Console.WriteLine("total net : " + TOTAL_NET);
 
             //reader.Close();
             reader.Flush();
@@ -319,6 +349,7 @@ namespace bingo_sim
             //Console.WriteLine(PreviewRequest);
 
             ReceiveMessage(client);
+            AddBingoNumToCard();
         }
 
         private void Play_preview_btn_Click(object sender, EventArgs e)
