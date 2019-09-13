@@ -56,7 +56,7 @@ namespace bingo_sim
 
 
         // Dummy Data Bingo Card Numbers
-        //int[] bingoNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+        int[] cardSpotNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 
 
 
@@ -327,7 +327,7 @@ namespace bingo_sim
             //  BASE_WIN|<BaseWinValue>|COVER_WIN|<CoverWinValue>|BONUS_WIN|<BonusWinValue>|BASE_NET|<BaseCreditsNet>|BONUS_NET|<BonusCreditsNet>|TOTAL_NET|<TotalCreditsNet>|
 
             // Build Spin Request String
-            string SpinRequest = "|NEW_SPIN|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
+            string SpinRequest = "|NEW_SPIN|" + SubNumber + "|ENGINE_ID|" + ENGINE_ID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
             OutBoundMsg = SpinRequest;
             SendMessage(OutBoundMsg, client);
             //Console.WriteLine(SpinRequest);
@@ -343,13 +343,15 @@ namespace bingo_sim
             // Response Message format |PREVIEW_CARD|<SubNumber>|ENGINE_ID|<EngineID>|GAME_ID|<GameID>|BASE_CARD|<BaseCardSpots>|
 
             // Build Preview Card Request String
-            string PreviewRequest = "|PREVIEW_CARD|" + SubNumber + "|ENGINE_ID|" + EngineID + "|";
+            string PreviewRequest = "|PREVIEW_CARD|" + SubNumber + "|ENGINE_ID|" + ENGINE_ID + "|";
             OutBoundMsg = PreviewRequest;
             SendMessage(OutBoundMsg, client);
             //Console.WriteLine(PreviewRequest);
 
             ReceiveMessage(client);
             AddBingoNumToCard();
+            BONUS_CARD = cardSpotNums;
+            AddBonusNumToCard();
         }
 
         private void Play_preview_btn_Click(object sender, EventArgs e)
@@ -361,7 +363,7 @@ namespace bingo_sim
             //  BASE_WIN|<BaseWinValue>|COVER_WIN|<CoverWinValue>|BONUS_WIN|<BonusWinValue>|BASE_NET|<BaseCreditsNet>|BONUS_NET|<BonusCreditsNet>|TOTAL_NET|<TotalCreditsNet>|
 
             // Build Play Preview Request String
-            string PlayPreviewRequest = "|PLAY_PREVIEW|" + SubNumber + "|ENGINE_ID|" + EngineID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
+            string PlayPreviewRequest = "|PLAY_PREVIEW|" + SubNumber + "|ENGINE_ID|" + ENGINE_ID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
             OutBoundMsg = PlayPreviewRequest;
             SendMessage(OutBoundMsg, client);
             //Console.WriteLine(PlayPreviewRequest);
