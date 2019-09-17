@@ -30,8 +30,8 @@ namespace bingo_sim
         private int BET_LEVEL;
         private int[] BALL_DRAW;
         private int[] BASE_CARD;
-        private string[] BASE_DAUB;
-        private string[] COVER_DAUB;
+        private int[] BASE_DAUB;
+        private int[] COVER_DAUB;
         private int BONUS_TYPE;
         private int[] BONUS_CARD;
         private string[] BONUS_DAUB;
@@ -186,15 +186,15 @@ namespace bingo_sim
                         break;
                     case "BASE_DAUB":
                         //Console.WriteLine(ItemVal.GetType());
-                        //string[] basedaub = ItemVal.Split(',');
-                        BASE_DAUB = ItemVal.Split(',');
+                        string[] basedaub = ItemVal.Split(',');
+                        BASE_DAUB = Array.ConvertAll(basedaub, int.Parse);
                         //TODO convert to int Array --- Array.ConvertAll(basedaub, int.Parse);
                         break;
                     case "COVER_DAUB":
                         //Console.WriteLine(ItemVal.GetType());
-                        //string[] coverdaub = ItemVal.Split(',');
-                        COVER_DAUB = ItemVal.Split(',');
-                        //TODO convert to int Array --- Array.ConvertAll(basedaub, int.Parse);
+                        string[] coverdaub = ItemVal.Split(',');
+                        COVER_DAUB = Array.ConvertAll(coverdaub, int.Parse);
+                        //TODO convert to int Array --- Array.ConvertAll(coverdaub, int.Parse);
                         break;
                     case "BONUS_TYPE":
                         //Console.WriteLine(ItemVal);
