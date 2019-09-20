@@ -97,6 +97,7 @@
             this.BetCreditlbl = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.MachineID = new System.Windows.Forms.TextBox();
             this.BingoCard.SuspendLayout();
             this.BonusCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BetLevel)).BeginInit();
@@ -914,12 +915,22 @@
             this.listBox2.Size = new System.Drawing.Size(383, 212);
             this.listBox2.TabIndex = 22;
             // 
+            // MachineID
+            // 
+            this.MachineID.Location = new System.Drawing.Point(273, 414);
+            this.MachineID.Name = "MachineID";
+            this.MachineID.Size = new System.Drawing.Size(100, 20);
+            this.MachineID.TabIndex = 23;
+            this.MachineID.Text = "12345";
+            this.MachineID.TextChanged += new System.EventHandler(this.GameID_TextChanged);
+            // 
             // BingoViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 484);
+            this.Controls.Add(this.MachineID);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.BetCreditlbl);
@@ -1023,6 +1034,7 @@
         private System.Windows.Forms.Label BetCreditlbl;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.TextBox MachineID;
     }
 }
 
