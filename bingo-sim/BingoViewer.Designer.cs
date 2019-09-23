@@ -61,7 +61,6 @@
             this.Interim_Daub_btn = new System.Windows.Forms.RadioButton();
             this.Coverall_Daub_btn = new System.Windows.Forms.RadioButton();
             this.MessageOutlbl = new System.Windows.Forms.Label();
-            this.IncomingMessagelbl = new System.Windows.Forms.Label();
             this.Credit_betlbl = new System.Windows.Forms.Label();
             this.Bet_levellbl = new System.Windows.Forms.Label();
             this.BonusCard = new System.Windows.Forms.TableLayoutPanel();
@@ -95,9 +94,10 @@
             this.BetLevel = new System.Windows.Forms.NumericUpDown();
             this.CreditsBet = new System.Windows.Forms.NumericUpDown();
             this.BetCreditlbl = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.MachineID = new System.Windows.Forms.TextBox();
+            this.OutGoingMSG = new System.Windows.Forms.TextBox();
+            this.IncomingMSG = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.BingoCard.SuspendLayout();
             this.BonusCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BetLevel)).BeginInit();
@@ -500,15 +500,6 @@
             this.MessageOutlbl.TabIndex = 9;
             this.MessageOutlbl.Text = "Out Going Message";
             // 
-            // IncomingMessagelbl
-            // 
-            this.IncomingMessagelbl.AutoSize = true;
-            this.IncomingMessagelbl.Location = new System.Drawing.Point(909, 237);
-            this.IncomingMessagelbl.Name = "IncomingMessagelbl";
-            this.IncomingMessagelbl.Size = new System.Drawing.Size(96, 13);
-            this.IncomingMessagelbl.TabIndex = 10;
-            this.IncomingMessagelbl.Text = "Incoming Message";
-            // 
             // Credit_betlbl
             // 
             this.Credit_betlbl.AutoSize = true;
@@ -899,22 +890,6 @@
             this.BetCreditlbl.TabIndex = 20;
             this.BetCreditlbl.Text = "Set Bet Level and Cedits before spin";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(766, 42);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(383, 186);
-            this.listBox1.TabIndex = 21;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(766, 255);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(383, 212);
-            this.listBox2.TabIndex = 22;
-            // 
             // MachineID
             // 
             this.MachineID.Location = new System.Drawing.Point(273, 414);
@@ -924,15 +899,43 @@
             this.MachineID.Text = "12345";
             this.MachineID.TextChanged += new System.EventHandler(this.GameID_TextChanged);
             // 
+            // OutGoingMSG
+            // 
+            this.OutGoingMSG.Location = new System.Drawing.Point(766, 39);
+            this.OutGoingMSG.Multiline = true;
+            this.OutGoingMSG.Name = "OutGoingMSG";
+            this.OutGoingMSG.ReadOnly = true;
+            this.OutGoingMSG.Size = new System.Drawing.Size(383, 111);
+            this.OutGoingMSG.TabIndex = 24;
+            // 
+            // IncomingMSG
+            // 
+            this.IncomingMSG.Location = new System.Drawing.Point(766, 184);
+            this.IncomingMSG.Multiline = true;
+            this.IncomingMSG.Name = "IncomingMSG";
+            this.IncomingMSG.ReadOnly = true;
+            this.IncomingMSG.Size = new System.Drawing.Size(383, 215);
+            this.IncomingMSG.TabIndex = 25;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(904, 168);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(96, 13);
+            this.label26.TabIndex = 26;
+            this.label26.Text = "Incoming Message";
+            // 
             // BingoViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 484);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.IncomingMSG);
+            this.Controls.Add(this.OutGoingMSG);
             this.Controls.Add(this.MachineID);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.BetCreditlbl);
             this.Controls.Add(this.CreditsBet);
             this.Controls.Add(this.BetLevel);
@@ -941,7 +944,6 @@
             this.Controls.Add(this.BonusCard);
             this.Controls.Add(this.Bet_levellbl);
             this.Controls.Add(this.Credit_betlbl);
-            this.Controls.Add(this.IncomingMessagelbl);
             this.Controls.Add(this.MessageOutlbl);
             this.Controls.Add(this.Coverall_Daub_btn);
             this.Controls.Add(this.Interim_Daub_btn);
@@ -998,7 +1000,6 @@
         private System.Windows.Forms.Label o4;
         private System.Windows.Forms.Label o5;
         private System.Windows.Forms.Label MessageOutlbl;
-        private System.Windows.Forms.Label IncomingMessagelbl;
         private System.Windows.Forms.Label Credit_betlbl;
         private System.Windows.Forms.Label Bet_levellbl;
         private System.Windows.Forms.TableLayoutPanel BonusCard;
@@ -1032,9 +1033,10 @@
         private System.Windows.Forms.NumericUpDown BetLevel;
         private System.Windows.Forms.NumericUpDown CreditsBet;
         private System.Windows.Forms.Label BetCreditlbl;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.TextBox MachineID;
+        private System.Windows.Forms.TextBox OutGoingMSG;
+        private System.Windows.Forms.TextBox IncomingMSG;
+        private System.Windows.Forms.Label label26;
     }
 }
 

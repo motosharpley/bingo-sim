@@ -47,7 +47,7 @@ namespace bingo_sim
         private string IP_ADDRESS = "127.0.0.1"; // this should be populated with the EGM IP Address
         private int SUB_NUMBER;
         private int MACHINE_ID = 1234567;
-        private string SERVER = "127.0.0.1";
+        private string SERVER = "127.0.0.1";// 10.7.3.2 for production server
 
         private string OutBoundMsg;
 
@@ -56,7 +56,7 @@ namespace bingo_sim
         byte[] byteOutboundBuffer;
 
 
-        // Dummy Data Bingo Card Numbers
+        // Dummy Data Bingo Card Index Numbers
         int[] cardSpotNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 
 
@@ -90,12 +90,10 @@ namespace bingo_sim
                 }
             }
         }
-         
-        //public TcpClient client = new TcpClient();
 
         public void Connect(String msg)
         {
-
+            this.OutGoingMSG.Text = msg;
             try
             {
                 string server = SERVER;
@@ -112,7 +110,7 @@ namespace bingo_sim
                 String responseData = String.Empty;
                 Int32 bytes = stream.Read(data, 0, data.Length);
                 responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
-                //ParseMessage(responseData);
+                this.IncomingMSG.Text = responseData;
 
                 string[] items = responseData.Split('|');
 
@@ -376,6 +374,8 @@ namespace bingo_sim
             int ID = Convert.ToInt32(MachineID.Text);
             MACHINE_ID = ID;
         }
+
+
     }
 
 
