@@ -344,6 +344,9 @@ namespace bingo_sim
             AddBonusNumToCard();
             DaubBaseCard();
             DaubBonusCard();
+
+            this.BaseWin.Text = BASE_WIN.ToString();
+            this.BonusWin.Text = BONUS_WIN.ToString();
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)

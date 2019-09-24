@@ -97,6 +97,10 @@
             this.IncomingMSG = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.DeviceID = new System.Windows.Forms.Label();
+            this.BaseWin = new System.Windows.Forms.TextBox();
+            this.BaseWinLBL = new System.Windows.Forms.Label();
+            this.BonusWin = new System.Windows.Forms.TextBox();
+            this.BonusWinLBL = new System.Windows.Forms.Label();
             this.BingoCard.SuspendLayout();
             this.BonusCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BetLevel)).BeginInit();
@@ -910,12 +914,48 @@
             this.DeviceID.TabIndex = 27;
             this.DeviceID.Text = "Enter Machine ID";
             // 
+            // BaseWin
+            // 
+            this.BaseWin.Location = new System.Drawing.Point(754, 447);
+            this.BaseWin.Name = "BaseWin";
+            this.BaseWin.Size = new System.Drawing.Size(100, 20);
+            this.BaseWin.TabIndex = 28;
+            // 
+            // BaseWinLBL
+            // 
+            this.BaseWinLBL.AutoSize = true;
+            this.BaseWinLBL.Location = new System.Drawing.Point(780, 431);
+            this.BaseWinLBL.Name = "BaseWinLBL";
+            this.BaseWinLBL.Size = new System.Drawing.Size(53, 13);
+            this.BaseWinLBL.TabIndex = 29;
+            this.BaseWinLBL.Text = "Base Win";
+            // 
+            // BonusWin
+            // 
+            this.BonusWin.Location = new System.Drawing.Point(875, 447);
+            this.BonusWin.Name = "BonusWin";
+            this.BonusWin.Size = new System.Drawing.Size(100, 20);
+            this.BonusWin.TabIndex = 30;
+            // 
+            // BonusWinLBL
+            // 
+            this.BonusWinLBL.AutoSize = true;
+            this.BonusWinLBL.Location = new System.Drawing.Point(894, 431);
+            this.BonusWinLBL.Name = "BonusWinLBL";
+            this.BonusWinLBL.Size = new System.Drawing.Size(59, 13);
+            this.BonusWinLBL.TabIndex = 31;
+            this.BonusWinLBL.Text = "Bonus Win";
+            // 
             // BingoViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 484);
+            this.Controls.Add(this.BonusWinLBL);
+            this.Controls.Add(this.BonusWin);
+            this.Controls.Add(this.BaseWinLBL);
+            this.Controls.Add(this.BaseWin);
             this.Controls.Add(this.DeviceID);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.IncomingMSG);
@@ -1019,6 +1059,10 @@
         private System.Windows.Forms.TextBox IncomingMSG;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label DeviceID;
+        private System.Windows.Forms.TextBox BaseWin;
+        private System.Windows.Forms.Label BaseWinLBL;
+        private System.Windows.Forms.TextBox BonusWin;
+        private System.Windows.Forms.Label BonusWinLBL;
     }
 }
 
