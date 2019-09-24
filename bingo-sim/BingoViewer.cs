@@ -34,7 +34,7 @@ namespace bingo_sim
         private int[] COVER_DAUB;
         private int BONUS_TYPE;
         private int[] BONUS_CARD;
-        private string[] BONUS_DAUB;
+        private int[] BONUS_DAUB;
         private int BASE_WIN;
         private int COVER_WIN;
         private int BONUS_WIN;
@@ -58,7 +58,7 @@ namespace bingo_sim
 
         // Dummy Data Bingo Card Index Numbers
         int[] cardSpotNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
-
+        int[] blankDaubs = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
 
         private void AddBingoNumToCard()
@@ -88,6 +88,41 @@ namespace bingo_sim
                     BingoCardLabel.Text = bingonum.ToString();
                     i++;
                 }
+            }
+        }
+
+        private void DaubBaseCard()
+        {
+            int i = 0;
+            foreach (Control control in BingoCard.Controls)
+            {
+                Label BingoCardLabel = control as Label;
+                if (BASE_DAUB[i] > 0)
+                {
+                    BingoCardLabel.BackColor = Color.FromArgb(204, 0, 0);                    
+                } else
+                {
+                    BingoCardLabel.BackColor = Color.FromArgb(255, 255, 255);
+                }
+                i++;
+            }
+        }
+
+        private void DaubBonusCard()
+        {
+            int i = 0;
+            foreach (Control control in BonusCard.Controls)
+            {
+                Label BingoCardLabel = control as Label;
+                if (BONUS_DAUB[i] >0)
+                {
+                    BingoCardLabel.BackColor = Color.FromArgb(204, 0, 0);
+                }
+                else
+                {
+                    BingoCardLabel.BackColor = Color.FromArgb(255, 255, 255);
+                }
+                i++;
             }
         }
 
@@ -177,8 +212,8 @@ namespace bingo_sim
                             break;
                         case "BONUS_DAUB":
                             //Console.WriteLine(ItemVal.GetType());
-                            //string[] basedaub = ItemVal.Split(',');
-                            BONUS_DAUB = ItemVal.Split(',');
+                            string[] bonusdaub = ItemVal.Split(',');
+                            BONUS_DAUB = Array.ConvertAll(bonusdaub, int.Parse);
                             //TODO convert to int Array --- Array.ConvertAll(basedaub, int.Parse);
                             break;
                         case "BASE_WIN":
@@ -307,6 +342,8 @@ namespace bingo_sim
             // Display Bingo Cards
             AddBingoNumToCard();
             AddBonusNumToCard();
+            DaubBaseCard();
+            DaubBonusCard();
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
@@ -322,8 +359,13 @@ namespace bingo_sim
 
             // Display Card Preview Set bonus card to spot indexes
             AddBingoNumToCard();
-            BONUS_CARD = cardSpotNums; // set bonus card to spot indexes
+            BONUS_CARD = blankDaubs; // set bonus card to spot indexes
             AddBonusNumToCard();
+            BASE_DAUB = blankDaubs;
+            BONUS_DAUB = blankDaubs;
+            DaubBaseCard();
+            DaubBonusCard();
+
         }
 
         private void Play_preview_btn_Click(object sender, EventArgs e)
@@ -341,19 +383,10 @@ namespace bingo_sim
             // Display Bingo Cards
             AddBingoNumToCard();
             AddBonusNumToCard();
+            DaubBaseCard();
+            DaubBonusCard();
         }
 
-        private void Interim_Daub_btn_CheckedChanged(object sender, EventArgs e)
-        {
-            // Display Interim Card Daub
-            // Interim Daub Data BASE_DAUB
-        }
-
-        private void Coverall_Daub_btn_CheckedChanged(object sender, EventArgs e)
-        {
-            // Display Coverall Card Daub
-            // Coverall Daub Data COVER_DAUB
-        }
 
         private void BetLevel_ValueChanged(object sender, EventArgs e)
         {

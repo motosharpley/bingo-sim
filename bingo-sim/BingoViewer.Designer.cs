@@ -58,8 +58,6 @@
             this.Spin_btn = new System.Windows.Forms.Button();
             this.Preview_btn = new System.Windows.Forms.Button();
             this.Play_preview_btn = new System.Windows.Forms.Button();
-            this.Interim_Daub_btn = new System.Windows.Forms.RadioButton();
-            this.Coverall_Daub_btn = new System.Windows.Forms.RadioButton();
             this.MessageOutlbl = new System.Windows.Forms.Label();
             this.Credit_betlbl = new System.Windows.Forms.Label();
             this.Bet_levellbl = new System.Windows.Forms.Label();
@@ -98,6 +96,7 @@
             this.OutGoingMSG = new System.Windows.Forms.TextBox();
             this.IncomingMSG = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.DeviceID = new System.Windows.Forms.Label();
             this.BingoCard.SuspendLayout();
             this.BonusCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BetLevel)).BeginInit();
@@ -466,30 +465,6 @@
             this.Play_preview_btn.Text = "Play Preview";
             this.Play_preview_btn.UseVisualStyleBackColor = true;
             this.Play_preview_btn.Click += new System.EventHandler(this.Play_preview_btn_Click);
-            // 
-            // Interim_Daub_btn
-            // 
-            this.Interim_Daub_btn.AutoSize = true;
-            this.Interim_Daub_btn.Location = new System.Drawing.Point(24, 409);
-            this.Interim_Daub_btn.Name = "Interim_Daub_btn";
-            this.Interim_Daub_btn.Size = new System.Drawing.Size(115, 17);
-            this.Interim_Daub_btn.TabIndex = 7;
-            this.Interim_Daub_btn.TabStop = true;
-            this.Interim_Daub_btn.Text = "Show Interim Daub";
-            this.Interim_Daub_btn.UseVisualStyleBackColor = true;
-            this.Interim_Daub_btn.CheckedChanged += new System.EventHandler(this.Interim_Daub_btn_CheckedChanged);
-            // 
-            // Coverall_Daub_btn
-            // 
-            this.Coverall_Daub_btn.AutoSize = true;
-            this.Coverall_Daub_btn.Location = new System.Drawing.Point(145, 409);
-            this.Coverall_Daub_btn.Name = "Coverall_Daub_btn";
-            this.Coverall_Daub_btn.Size = new System.Drawing.Size(122, 17);
-            this.Coverall_Daub_btn.TabIndex = 8;
-            this.Coverall_Daub_btn.TabStop = true;
-            this.Coverall_Daub_btn.Text = "Show Coverall Daub";
-            this.Coverall_Daub_btn.UseVisualStyleBackColor = true;
-            this.Coverall_Daub_btn.CheckedChanged += new System.EventHandler(this.Coverall_Daub_btn_CheckedChanged);
             // 
             // MessageOutlbl
             // 
@@ -926,12 +901,22 @@
             this.label26.TabIndex = 26;
             this.label26.Text = "Incoming Message";
             // 
+            // DeviceID
+            // 
+            this.DeviceID.AutoSize = true;
+            this.DeviceID.Location = new System.Drawing.Point(177, 417);
+            this.DeviceID.Name = "DeviceID";
+            this.DeviceID.Size = new System.Drawing.Size(90, 13);
+            this.DeviceID.TabIndex = 27;
+            this.DeviceID.Text = "Enter Machine ID";
+            // 
             // BingoViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 484);
+            this.Controls.Add(this.DeviceID);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.IncomingMSG);
             this.Controls.Add(this.OutGoingMSG);
@@ -945,8 +930,6 @@
             this.Controls.Add(this.Bet_levellbl);
             this.Controls.Add(this.Credit_betlbl);
             this.Controls.Add(this.MessageOutlbl);
-            this.Controls.Add(this.Coverall_Daub_btn);
-            this.Controls.Add(this.Interim_Daub_btn);
             this.Controls.Add(this.Play_preview_btn);
             this.Controls.Add(this.Preview_btn);
             this.Controls.Add(this.Spin_btn);
@@ -973,8 +956,6 @@
         private System.Windows.Forms.Button Spin_btn;
         private System.Windows.Forms.Button Preview_btn;
         private System.Windows.Forms.Button Play_preview_btn;
-        private System.Windows.Forms.RadioButton Interim_Daub_btn;
-        private System.Windows.Forms.RadioButton Coverall_Daub_btn;
         private System.Windows.Forms.Label b2;
         private System.Windows.Forms.Label b3;
         private System.Windows.Forms.Label b4;
@@ -1037,6 +1018,7 @@
         private System.Windows.Forms.TextBox OutGoingMSG;
         private System.Windows.Forms.TextBox IncomingMSG;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label DeviceID;
     }
 }
 
