@@ -347,6 +347,7 @@ namespace bingo_sim
             BaseWin.Text = BASE_WIN.ToString();
             BonusWin.Text = BONUS_WIN.ToString();
             NetWin.Text = TOTAL_NET.ToString();
+            preview = false;
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
@@ -368,6 +369,7 @@ namespace bingo_sim
             BONUS_DAUB = blankDaubs;
             DaubBaseCard();
             DaubBonusCard();
+            preview = true;
 
         }
 
@@ -379,15 +381,20 @@ namespace bingo_sim
             //  <BallDraw>|BASE_CARD|<BaseCardSpots>|BASE_DAUB|<BaseDaubs>|COVER_DAUB|<CoverDaubs>|BONUS_TYPE|<BonusID>|BONUS_CARD|<BonusCardSpots>|BONUS_DAUB|<BonusDaubs>|
             //  BASE_WIN|<BaseWinValue>|COVER_WIN|<CoverWinValue>|BONUS_WIN|<BonusWinValue>|BASE_NET|<BaseCreditsNet>|BONUS_NET|<BonusCreditsNet>|TOTAL_NET|<TotalCreditsNet>|
 
-            // Build Play Preview Request String
-            string PlayPreviewRequest = "|PLAY_PREVIEW|" + SUB_NUMBER + "|ENGINE_ID|" + ENGINE_ID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
-            Connect(PlayPreviewRequest);
+            if (preview)
+            {
+                // Build Play Preview Request String
+                string PlayPreviewRequest = "|PLAY_PREVIEW|" + SUB_NUMBER + "|ENGINE_ID|" + ENGINE_ID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
+                Connect(PlayPreviewRequest);
 
-            // Display Bingo Cards
-            AddBingoNumToCard();
-            AddBonusNumToCard();
-            DaubBaseCard();
-            DaubBonusCard();
+                // Display Bingo Cards
+                AddBingoNumToCard();
+                AddBonusNumToCard();
+                DaubBaseCard();
+                DaubBonusCard();
+                preview = false;
+            }
+
         }
 
 
