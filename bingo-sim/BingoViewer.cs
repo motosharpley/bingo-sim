@@ -347,6 +347,7 @@ namespace bingo_sim
 
             this.BaseWin.Text = BASE_WIN.ToString();
             this.BonusWin.Text = BONUS_WIN.ToString();
+            this.NetWin.Text = TOTAL_NET.ToString();
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
