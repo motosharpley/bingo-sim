@@ -49,11 +49,8 @@ namespace bingo_sim
         private int MACHINE_ID = 1234567;
         private string SERVER = "127.0.0.1";// 10.7.3.2 for production server
 
-        private string OutBoundMsg;
-
-        // TODO Implement into message handlers
-        byte[] byteInboundBuffer = new Byte[256];
-        byte[] byteOutboundBuffer;
+        private bool preview = false;
+        private bool connected = false;
 
 
         // Dummy Data Bingo Card Index Numbers
@@ -128,7 +125,7 @@ namespace bingo_sim
 
         public void Connect(String msg)
         {
-            this.OutGoingMSG.Text = msg;
+            OutGoingMSG.Text = msg;
             try
             {
                 string server = SERVER;
@@ -145,7 +142,7 @@ namespace bingo_sim
                 String responseData = String.Empty;
                 Int32 bytes = stream.Read(data, 0, data.Length);
                 responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
-                this.IncomingMSG.Text = responseData;
+                IncomingMSG.Text = responseData;
 
                 string[] items = responseData.Split('|');
 
@@ -318,13 +315,15 @@ namespace bingo_sim
             //Connect to bingo server
             // Connect Message format |SUBSCRIBE|Redfire_92|IP_ADDRESS|10.7.3.87|
             // Response Message format |SUBSCRIBE|<SubNumber>|ENGINE_ID|<EngineID>|
-            // Build Subscribe Request String
-            //string SubRequest = "|SUBSCRIBE|" + GameName + "|IP_ADDRESS|" + IP_ADDRESS + "|";
-            //Instantiate client connection
 
             // Send Subcription message
             string SubRequest = "|SUBSCRIBE|" + GameName + "|MACHINE_ID|" + MACHINE_ID + "|";
-            Connect(SubRequest);
+            if (!connected)
+            {
+                Connect(SubRequest);
+                connected = true;
+            }
+           
         }
 
         private void Spin_btn_Click(object sender, EventArgs e)
@@ -335,7 +334,7 @@ namespace bingo_sim
             //  <BallDraw>|BASE_CARD|<BaseCardSpots>|BASE_DAUB|<BaseDaubs>|COVER_DAUB|<CoverDaubs>|BONUS_TYPE|<BonusID>|BONUS_CARD|<BonusCardSpots>|BONUS_DAUB|<BonusDaubs>|
             //  BASE_WIN|<BaseWinValue>|COVER_WIN|<CoverWinValue>|BONUS_WIN|<BonusWinValue>|BASE_NET|<BaseCreditsNet>|BONUS_NET|<BonusCreditsNet>|TOTAL_NET|<TotalCreditsNet>|
 
-            // Build Spin Request String
+            // Build and Send Spin Request String
             string SpinRequest = "|NEW_SPIN|" + SUB_NUMBER + "|ENGINE_ID|" + ENGINE_ID + "|CREDITS_BET|" + CREDITS_BET + "|BET_LEVEL|" + BET_LEVEL + "|";
             Connect(SpinRequest);
 
@@ -344,10 +343,10 @@ namespace bingo_sim
             AddBonusNumToCard();
             DaubBaseCard();
             DaubBonusCard();
-
-            this.BaseWin.Text = BASE_WIN.ToString();
-            this.BonusWin.Text = BONUS_WIN.ToString();
-            this.NetWin.Text = TOTAL_NET.ToString();
+            // Display play results
+            BaseWin.Text = BASE_WIN.ToString();
+            BonusWin.Text = BONUS_WIN.ToString();
+            NetWin.Text = TOTAL_NET.ToString();
         }
 
         private void Preview_btn_Click(object sender, EventArgs e)
