@@ -42,11 +42,13 @@ namespace bingo_sim
         private int BONUS_NET;
         private int TOTAL_NET;
 
+
+
         // Subscription Event Variables
         private string GameName = "Redfire"; // this field is used on start-up subscription only and server assigned GAME_ID is in reponse message for use in all subsequent requests
         private string IP_ADDRESS = "127.0.0.1"; // this should be populated with the EGM IP Address
         private int SUB_NUMBER;
-        private int MACHINE_ID = 1234567;
+        private int MACHINE_ID = 12345;
         private string SERVER = "127.0.0.1";// 10.7.3.2 for production server
 
         private bool preview = false;
@@ -254,7 +256,7 @@ namespace bingo_sim
                     {
                         Console.Write("{0}  ", BALL_DRAW[i]);
                     }
-                    Console.Write("\n");
+                    Console.Write("\n");                    
                 }
                 // End Ball Draw log
                 // log out Base Daub Arrary
@@ -347,6 +349,9 @@ namespace bingo_sim
             BaseWin.Text = BASE_WIN.ToString();
             BonusWin.Text = BONUS_WIN.ToString();
             NetWin.Text = TOTAL_NET.ToString();
+            // array to string for ball draw display purpose only
+            string balls = String.Join(",", BALL_DRAW.Select(p => p.ToString()).ToArray());
+            BallDraw.Text = balls;
             preview = false;
         }
 
@@ -369,6 +374,7 @@ namespace bingo_sim
             BONUS_DAUB = blankDaubs;
             DaubBaseCard();
             DaubBonusCard();
+            BallDraw.Text = "";
             preview = true;
 
         }
@@ -392,6 +398,9 @@ namespace bingo_sim
                 AddBonusNumToCard();
                 DaubBaseCard();
                 DaubBonusCard();
+                // array to string for ball draw display purpose only
+                string balls = String.Join(",", BALL_DRAW.Select(p => p.ToString()).ToArray());
+                BallDraw.Text = balls;
                 preview = false;
             }
 
