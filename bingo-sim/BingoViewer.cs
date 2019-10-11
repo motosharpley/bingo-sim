@@ -49,7 +49,7 @@ namespace bingo_sim
         private string IP_ADDRESS = "127.0.0.1"; // this should be populated with the EGM IP Address
         private int SUB_NUMBER;
         private int MACHINE_ID = 12345;
-        private string SERVER = "127.0.0.1";// 10.7.3.2 for production server
+        private string SERVER = "10.7.3.2";// 10.7.3.2 for production server
 
         private bool preview = false;
         private bool connected = false;
@@ -398,6 +398,10 @@ namespace bingo_sim
                 AddBonusNumToCard();
                 DaubBaseCard();
                 DaubBonusCard();
+                // Display play results
+                BaseWin.Text = BASE_WIN.ToString();
+                BonusWin.Text = BONUS_WIN.ToString();
+                NetWin.Text = TOTAL_NET.ToString();
                 // array to string for ball draw display purpose only
                 string balls = String.Join(",", BALL_DRAW.Select(p => p.ToString()).ToArray());
                 BallDraw.Text = balls;
